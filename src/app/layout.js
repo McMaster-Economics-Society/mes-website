@@ -1,25 +1,25 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins } from "next/font/google";
+import Navbar from "./components/Navbar";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const poppins = Poppins({
+  weight: ["400", "700"], // Specify the weights you need
+  subsets: ["latin"], // Specify the subsets you need
+  variable: "--font-poppins", // Define a CSS variable
 });
 
 export const metadata = {
-  title: "Your Website Title",
-  description: "Your website description",
+  title: "McMaster Economics Society",
+  description:
+    "The McMaster Economics Society (MES) is dedicated to enhance the experience of all students with a passion for Economics.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <meta name="apple-mobile-web-app-title" content="MacEconSociety" />
+      <body className={`${poppins.variable}`}>
+        <Navbar />
         {children}
       </body>
     </html>
