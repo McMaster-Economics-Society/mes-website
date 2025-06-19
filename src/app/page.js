@@ -49,9 +49,8 @@ export default function Home() {
 
       {/* Got Questions Section */}
       <GotQuestions />
-
       {/* Footer */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

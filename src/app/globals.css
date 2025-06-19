@@ -35,6 +35,7 @@ a {
     text-decoration: none;
 }
 
+/* Navigation bar */
 @media (prefers-color-scheme: dark) {
     html {
         color-scheme: dark;
@@ -118,13 +119,14 @@ a {
     color: #666666;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 16px;
     transition: color 0.3s ease;
     padding: 0.5rem 0;
 }
 
 .nav-links li a:hover {
     color: #89303d;
+    font-weight: 700;
 }
 
 .contact-btn {

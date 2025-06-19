@@ -21,13 +21,31 @@ export default function Footer() {
               </Link>
             </div>
             <div className={styles.contactInfo}>
-              <a className={styles.email} href="mailto:econ@themsss.com">
-                econ@themsss.com
-              </a>
-              <div className={styles.address}>
-                <p>1280 Main St W,</p>
-                <p>Hamilton, ON, Canada</p>
-                <p>L8S 4L8</p>
+              <div className={styles.contactItem}>
+                <Image
+                  src="/email-icon.svg"
+                  alt="Email"
+                  width={20}
+                  height={20}
+                  className={styles.contactIcon}
+                />
+                <a className={styles.email} href="mailto:econ@themsss.com">
+                  econ@themsss.com
+                </a>
+              </div>
+              <div className={styles.contactItem}>
+                <Image
+                  src="/location-icon.svg"
+                  alt="Location"
+                  width={20}
+                  height={20}
+                  className={styles.contactIcon}
+                />
+                <div className={styles.address}>
+                  <p>1280 Main St W,</p>
+                  <p>Hamilton, ON, Canada</p>
+                  <p>L8S 4L8</p>
+                </div>
               </div>
             </div>
           </div>
@@ -38,7 +56,7 @@ export default function Footer() {
               <h3 className={styles.columnTitle}>About</h3>
               <ul className={styles.linkList}>
                 <li>
-                  <Link href="/about">About MES</Link>
+                  <Link href="/about/about-mes">About MES</Link>
                 </li>
                 <li>
                   <Link href="/about/team">Our Team</Link>
@@ -88,14 +106,32 @@ export default function Footer() {
 
           {/* Social Media */}
           <div className={styles.socialSection}>
-            <a href="#" className={styles.socialLink} aria-label="Instagram">
+            <a
+              href="https://www.instagram.com/mcmasterecon"
+              className={styles.socialLink}
+              aria-label="Instagram"
+            >
               <div className={styles.socialIcon}>
-                <span>Instagram</span>
+                <Image
+                  src="/square-instagram-brands.svg"
+                  width={30}
+                  height={30}
+                  alt="Instagram"
+                />
               </div>
             </a>
-            <a href="#" className={styles.socialLink} aria-label="LinkedIn">
+            <a
+              href="https://www.linkedin.com/company/mcmastereconomicssociety/"
+              className={styles.socialLink}
+              aria-label="LinkedIn"
+            >
               <div className={styles.socialIcon}>
-                <span>LinkedIn</span>
+                <Image
+                  src="/linkedin-in-brands.svg"
+                  width={30}
+                  height={30}
+                  alt="LinkedIn"
+                />
               </div>
             </a>
           </div>
@@ -106,7 +142,7 @@ export default function Footer() {
           <hr className={styles.divider} />
           <p>
             © {new Date().getFullYear()} McMaster Economics Society. All Rights
-            Reserved
+            Reserved.
           </p>
         </div>
       </div>
