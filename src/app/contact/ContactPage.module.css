@@ -20,6 +20,7 @@
 
 .pageTitle {
     font-size: 3rem;
+    text-align: left;
     font-weight: bold;
     color: #111827;
     margin-bottom: 16px;
@@ -27,6 +28,7 @@
 }
 
 .pageSubtitle {
+    text-align: left;
     font-size: 1.25rem;
     color: #6b7280;
     margin: 0;
@@ -233,10 +235,12 @@
 
 @media (max-width: 768px) {
     .pageTitle {
+        text-align: left;
         font-size: 2.5rem;
     }
 
     .sectionTitle {
+        text-align: left;
         font-size: 1.75rem;
     }
 
@@ -274,10 +278,12 @@
 
 @media (max-width: 480px) {
     .pageTitle {
+        text-align: left;
         font-size: 2rem;
     }
 
     .pageSubtitle {
+        text-align: left;
         font-size: 1.125rem;
     }
 

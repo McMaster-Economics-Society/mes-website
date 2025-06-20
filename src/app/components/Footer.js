@@ -103,47 +103,49 @@ export default function Footer() {
               </ul>
             </div>
           </div>
-
-          {/* Social Media */}
-          <div className={styles.socialSection}>
-            <a
-              href="https://www.instagram.com/mcmasterecon"
-              className={styles.socialLink}
-              aria-label="Instagram"
-            >
-              <div className={styles.socialIcon}>
-                <Image
-                  src="/square-instagram-brands.svg"
-                  width={30}
-                  height={30}
-                  alt="Instagram"
-                />
-              </div>
-            </a>
-            <a
-              href="https://www.linkedin.com/company/mcmastereconomicssociety/"
-              className={styles.socialLink}
-              aria-label="LinkedIn"
-            >
-              <div className={styles.socialIcon}>
-                <Image
-                  src="/linkedin-in-brands.svg"
-                  width={30}
-                  height={30}
-                  alt="LinkedIn"
-                />
-              </div>
-            </a>
-          </div>
         </div>
 
-        {/* Copyright */}
+        {/* Copyright with Social Media */}
         <div className={styles.copyright}>
           <hr className={styles.divider} />
-          <p>
-            © {new Date().getFullYear()} McMaster Economics Society. All Rights
-            Reserved.
-          </p>
+          <div className={styles.copyrightContent}>
+            <p suppressHydrationWarning>
+              © {new Date().getFullYear()} McMaster Economics Society. All
+              Rights Reserved.
+            </p>
+
+            {/* Social Media moved here */}
+            <div className={styles.socialSection}>
+              <a
+                href="https://www.instagram.com/mcmasterecon"
+                className={styles.socialLink}
+                aria-label="Instagram"
+              >
+                <div className={styles.socialIcon}>
+                  <Image
+                    src="/square-instagram-brands.svg"
+                    width={30}
+                    height={30}
+                    alt="Instagram"
+                  />
+                </div>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/mcmastereconomicssociety/"
+                className={styles.socialLink}
+                aria-label="LinkedIn"
+              >
+                <div className={styles.socialIcon}>
+                  <Image
+                    src="/linkedin-in-brands.svg"
+                    width={30}
+                    height={30}
+                    alt="LinkedIn"
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
