@@ -30,6 +30,35 @@
     border: 1px solid #e5e7eb;
 }
 
+/* Group Photo Styles */
+.groupPhotoContainer {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.groupPhoto {
+    width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.groupPhoto:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.photoCaption {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: #6b7280;
+    font-style: italic;
+    font-weight: 500;
+}
+
 .description {
     font-size: 1.125rem;
     line-height: 1.7;
@@ -238,6 +267,14 @@
         padding: 1.5rem;
     }
 
+    .groupPhotoContainer {
+        margin-bottom: 1.5rem;
+    }
+
+    .photoCaption {
+        font-size: 0.9rem;
+    }
+
     .missionGrid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -264,5 +301,11 @@
 
     .section {
         margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .groupPhoto:hover {
+        transform: none; /* Disable hover effect on mobile */
     }
 }

@@ -123,6 +123,21 @@ export default function AboutMesPage() {
         <section className={styles.section}>
           <h1 className={styles.sectionTitle}>Who We Are</h1>
           <div className={styles.card}>
+            {/* Group Photo */}
+            <div className={styles.groupPhotoContainer}>
+              <Image
+                src="/mes-exec-team-2025.jpg" // Replace with your actual group photo path
+                alt="McMaster Economics Society Executive Team 2025"
+                width={800}
+                height={500}
+                className={styles.groupPhoto}
+                priority
+              />
+              <div className={styles.photoCaption}>
+                The 2025 McMaster Economics Society Executive Team
+              </div>
+            </div>
+
             <p className={styles.description}>
               The McMaster Economics Society (MES) is a passionate student-led
               organization that welcomes students from all programs who share an
@@ -190,13 +205,13 @@ export default function AboutMesPage() {
                 number={50}
                 suffix="+"
                 label="Students at our larger events"
-                duration={2500}
+                duration={1500}
               />
               <ImpactStat
                 number={20}
                 suffix="+"
                 label="Students at academic discussions"
-                duration={2000}
+                duration={1500}
               />
             </div>
           </div>
