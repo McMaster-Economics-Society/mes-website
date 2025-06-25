@@ -1,7 +1,8 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
+import MobileMenu from "./MobileMenu"; // Import the mobile menu component
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -9,6 +10,10 @@ export default function Navbar() {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
   };
 
   const handleDropdownToggle = (itemName) => {
@@ -23,6 +28,20 @@ export default function Navbar() {
     setActiveDropdown(null);
   };
 
+  // Handle body scroll lock when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isMobileMenuOpen]);
+
   const navItems = [
     { name: "Home", href: "/" },
     {
@@ -36,10 +55,7 @@ export default function Navbar() {
     { name: "Get Involved", href: "/get-involved" },
     { name: "Sponsorship", href: "/sponsorship" },
     { name: "Events", href: "/events" },
-    {
-      name: "Resources",
-      href: "#",
-    },
+    { name: "Resources", href: "/resources" },
   ];
 
   return (
@@ -55,12 +71,18 @@ export default function Navbar() {
           <span className="logo-text">MES</span>
         </Link>
 
-        <div className="menu-icon" onClick={toggleMobileMenu}>
-          ☰
+        {/* Mobile Menu Component - Only shows on mobile */}
+        <div className="mobile-only">
+          <MobileMenu
+            isOpen={isMobileMenuOpen}
+            onToggle={toggleMobileMenu}
+            onClose={closeMobileMenu}
+          />
         </div>
 
+        {/* Desktop Navigation */}
         <div className="nav-center">
-          <ul className={`nav-links ${isMobileMenuOpen ? "active" : ""}`}>
+          <ul className="nav-links">
             {navItems.map((item, index) => (
               <li
                 key={index}
@@ -73,22 +95,20 @@ export default function Navbar() {
                 <div className="nav-link-wrapper">
                   <Link href={item.href} className="nav-link">
                     {item.name}
-                    {item.dropdown && <span className="dropdown-arrow">▼</span>}
+                    {item.dropdown && (
+                      <span className="dropdown-arrow">
+                        <Image
+                          src="/caret-down.svg"
+                          width={20}
+                          height={20}
+                          alt="Caret Down"
+                        />
+                      </span>
+                    )}
                   </Link>
-
-                  {/* Mobile dropdown toggle */}
-                  {item.dropdown && (
-                    <button
-                      className="mobile-dropdown-toggle"
-                      onClick={() => handleDropdownToggle(item.name)}
-                      aria-label={`Toggle ${item.name} menu`}
-                    >
-                      ▼
-                    </button>
-                  )}
                 </div>
 
-                {/* Dropdown Menu */}
+                {/* Desktop Dropdown Menu */}
                 {item.dropdown && (
                   <ul
                     className={`dropdown-menu ${
@@ -113,6 +133,26 @@ export default function Navbar() {
           Contact Us
         </Link>
       </div>
+
+      <style jsx>{`
+        .mobile-only {
+          display: none;
+        }
+
+        @media (max-width: 768px) {
+          .mobile-only {
+            display: block;
+          }
+
+          .nav-center {
+            display: none;
+          }
+
+          .contact-btn {
+            display: none;
+          }
+        }
+      `}</style>
     </nav>
   );
 }

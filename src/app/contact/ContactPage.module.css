@@ -133,26 +133,35 @@
     /* Removed all styling - now just a plain container */
 }
 
+.contactIframe {
+    border: none;
+    width: 100%;
+    min-height: 800px;
+}
+
 .formContainer iframe {
+    width: 100%;
+    scale: 1.1;
     /* Removed border-radius and background */
 }
 
 /* FAQ Section */
 .faqSection {
     margin: 4rem 0;
+    scroll-margin-top: 80px; /* Offset for fixed headers */
 }
 
 .faqContainer {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .faqItem {
     background: white;
-    padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
@@ -163,12 +172,56 @@
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
+.faqButton {
+    width: 100%;
+    padding: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.faqButton:hover {
+    background-color: #f9fafb;
+}
+
+.faqButton:focus {
+    outline: none;
+    background-color: #f3f4f6;
+}
+
 .faqQuestion {
     font-size: 1.25rem;
     font-weight: 600;
     color: #89303d;
-    margin-bottom: 1rem;
-    margin-top: 0;
+    margin: 0;
+    flex: 1;
+    padding-right: 1rem;
+}
+
+.faqIcon {
+    color: #89303d;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.faqIconOpen {
+    transform: rotate(180deg);
+}
+
+.faqAnswerContainer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faqAnswerOpen {
+    max-height: 200px;
 }
 
 .faqAnswer {
@@ -176,6 +229,7 @@
     line-height: 1.6;
     margin: 0;
     font-size: 1rem;
+    padding: 0 2rem 2rem 2rem;
 }
 
 /* Additional Information Section */
@@ -228,6 +282,10 @@
         padding: 2rem;
     }
 
+    .contactIframe {
+        min-height: 900px;
+    }
+
     .formContainer {
         /* No padding needed */
     }
@@ -249,6 +307,10 @@
         padding: 1.5rem;
     }
 
+    .contactIframe {
+        min-height: 600px;
+    }
+
     .contentWrapper {
         padding: 32px 16px;
     }
@@ -262,8 +324,12 @@
         text-align: center;
     }
 
-    .faqItem {
+    .faqButton {
         padding: 1.5rem;
+    }
+
+    .faqAnswer {
+        padding: 0 1.5rem 1.5rem 1.5rem;
     }
 
     .faqQuestion {
@@ -296,8 +362,17 @@
         padding: 1.25rem;
     }
 
-    .faqItem {
+    .contactIframe {
+        align-items: center;
+        min-height: 500px;
+    }
+
+    .faqButton {
         padding: 1.25rem;
+    }
+
+    .faqAnswer {
+        padding: 0 1.25rem 1.25rem 1.25rem;
     }
 
     .infoCard {

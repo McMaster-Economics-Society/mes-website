@@ -85,15 +85,52 @@
     flex-direction: column;
     gap: 0.75rem;
 }
-.linkList a {
+
+/* Fixed styles for proper alignment */
+.linkWithIcon {
+    display: flex !important;
+    justify-content: flex-start; /* Changed from center to flex-start */
+    align-items: center;
+    gap: 6px;
     color: #666666;
     text-decoration: none;
     transition: color 0.3s ease;
     font-size: 0.95rem;
+    text-decoration: underline;
 }
-.linkList a:hover {
+
+.linkWithIcon:hover {
     color: #89303d;
 }
+
+.linkWithIcon span {
+    text-decoration: underline;
+}
+
+.linkIcon {
+    flex-shrink: 0;
+    text-decoration: underline;
+}
+
+.linkIconText {
+    flex-shrink: 0;
+    font-size: 0.95rem;
+    line-height: 1;
+}
+
+/* Update the existing .linkList a rule to be more specific */
+.linkList a:not(.linkWithIcon) {
+    color: #666666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+    text-decoration: underline;
+}
+
+.linkList a:not(.linkWithIcon):hover {
+    color: #89303d;
+}
+
 .socialSection {
     display: flex;
     gap: 1rem;
@@ -181,5 +218,10 @@
         flex-direction: column;
         gap: 1rem;
         text-align: center;
+    }
+
+    /* Override desktop link alignment for mobile center alignment */
+    .linkWithIcon {
+        justify-content: center;
     }
 }

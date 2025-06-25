@@ -56,13 +56,40 @@ export default function Footer() {
               <h3 className={styles.columnTitle}>About</h3>
               <ul className={styles.linkList}>
                 <li>
-                  <Link href="/about/about-mes">About MES</Link>
+                  <Link href="/about/about-mes" className={styles.linkWithIcon}>
+                    <span>About MES</span>
+                    <Image
+                      width={16}
+                      height={16}
+                      src="/arrow-up-right.svg"
+                      alt="Arrow up right"
+                      className={styles.linkIcon}
+                    />
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/about/team">Our Team</Link>
+                  <Link href="/about/team" className={styles.linkWithIcon}>
+                    <span>Our Team</span>
+                    <Image
+                      width={16}
+                      height={16}
+                      src="/arrow-up-right.svg"
+                      alt="Arrow up right"
+                      className={styles.linkIcon}
+                    />
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/about/newsroom">Newsroom</Link>
+                  <Link href="/about/newsroom" className={styles.linkWithIcon}>
+                    <span>Newsroom</span>
+                    <Image
+                      width={16}
+                      height={16}
+                      src="/arrow-up-right.svg"
+                      alt="Arrow up right"
+                      className={styles.linkIcon}
+                    />
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -71,13 +98,40 @@ export default function Footer() {
               <h3 className={styles.columnTitle}>Community</h3>
               <ul className={styles.linkList}>
                 <li>
-                  <Link href="/events">Events</Link>
+                  <Link href="/events" className={styles.linkWithIcon}>
+                    <span>Events</span>
+                    <Image
+                      width={16}
+                      height={16}
+                      src="/arrow-up-right.svg"
+                      alt="Arrow up right"
+                      className={styles.linkIcon}
+                    />
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/resources">MES Magazine</Link>
+                  <Link href="/resources" className={styles.linkWithIcon}>
+                    <span>MES Magazine</span>
+                    <Image
+                      width={16}
+                      height={16}
+                      src="/arrow-up-right.svg"
+                      alt="Arrow up right"
+                      className={styles.linkIcon}
+                    />
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/resources">Resources</Link>
+                  <Link href="/resources" className={styles.linkWithIcon}>
+                    <span>Resources</span>
+                    <Image
+                      width={16}
+                      height={16}
+                      src="/arrow-up-right.svg"
+                      alt="Arrow up right"
+                      className={styles.linkIcon}
+                    />
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -86,7 +140,16 @@ export default function Footer() {
               <h3 className={styles.columnTitle}>Career</h3>
               <ul className={styles.linkList}>
                 <li>
-                  <Link href="/get-involved">Get Involved</Link>
+                  <Link href="/get-involved" className={styles.linkWithIcon}>
+                    <span>Get Involved</span>
+                    <Image
+                      width={16}
+                      height={16}
+                      src="/arrow-up-right.svg"
+                      alt="Arrow up right"
+                      className={styles.linkIcon}
+                    />
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -95,10 +158,28 @@ export default function Footer() {
               <h3 className={styles.columnTitle}>Contact</h3>
               <ul className={styles.linkList}>
                 <li>
-                  <Link href="/faqs">FAQs</Link>
+                  <Link href="/faqs" className={styles.linkWithIcon}>
+                    <span>FAQs</span>
+                    <Image
+                      width={16}
+                      height={16}
+                      src="/arrow-up-right.svg"
+                      alt="Arrow up right"
+                      className={styles.linkIcon}
+                    />
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/contact">Contact Us</Link>
+                  <Link href="/contact" className={styles.linkWithIcon}>
+                    <span>Contact Us</span>
+                    <Image
+                      width={16}
+                      height={16}
+                      src="/arrow-up-right.svg"
+                      alt="Arrow up right"
+                      className={styles.linkIcon}
+                    />
+                  </Link>
                 </li>
               </ul>
             </div>
