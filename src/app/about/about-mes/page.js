@@ -8,10 +8,20 @@ import { AnimatedCounter } from "../../components/AnimatedCounter";
 const MissionItem = ({ icon, title, description }) => (
   <div className={styles.missionItem}>
     <div className={styles.missionIcon}>
-      <Image src={icon} alt={title} width={60} height={60} />
+      <Image
+        src={icon}
+        alt={title}
+        width={200}
+        height={165.5}
+        objectFit="cover"
+      />
     </div>
-    <h3 className={styles.missionTitle}>{title}</h3>
-    <p className={styles.missionDescription}>{description}</p>
+    <div className={styles.missionTitle}>
+      <h3>{title}</h3>
+    </div>
+    <div className={styles.missionDescription}>
+      <p>{description}</p>
+    </div>
   </div>
 );
 
@@ -52,25 +62,25 @@ const ForwardItem = ({ icon, title, description }) => (
 export default function AboutMesPage() {
   const missionItems = [
     {
-      icon: "/academic-icon.png", // You'll need to add these icons
+      icon: "/academic-icon.jpg", // You'll need to add these icons
       title: "Academic Growth",
       description:
         "Provide valuable insight on academic opportunities & career paths after graduation",
     },
     {
-      icon: "/promotion-icon.png",
+      icon: "/promotion-icon.jpg",
       title: "Department Promotion",
       description:
         "Enhance awareness of the Economics department and enrich student experience",
     },
     {
-      icon: "/network-icon.png",
+      icon: "/network-icon.jpg",
       title: "Network Building",
       description:
         "Help students connect with Economics Department scholars and industry professionals",
     },
     {
-      icon: "/discussion-icon.png",
+      icon: "/discussion-icon.jpg",
       title: "Meaningful Discussion",
       description:
         "Create spaces for exploration of economic issues among like-minded peers",
@@ -127,14 +137,14 @@ export default function AboutMesPage() {
             <div className={styles.groupPhotoContainer}>
               <Image
                 src="/mes-exec-team-2025.jpg" // Replace with your actual group photo path
-                alt="McMaster Economics Society Executive Team 2025"
+                alt="McMaster Economics Society Executive Team 2024-2025"
                 width={800}
                 height={500}
                 className={styles.groupPhoto}
                 priority
               />
               <div className={styles.photoCaption}>
-                The 2025 McMaster Economics Society Executive Team
+                The 2024-2025 McMaster Economics Society Executive Team
               </div>
             </div>
 

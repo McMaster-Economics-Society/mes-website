@@ -129,19 +129,15 @@
     font-size: 1rem;
 }
 
-.formContainer {
-    /* Removed all styling - now just a plain container */
-}
-
 .contactIframe {
     border: none;
     width: 100%;
-    min-height: 800px;
+    min-height: 550px;
 }
 
 .formContainer iframe {
     width: 100%;
-    scale: 1.1;
+    scale: 1.05;
     /* Removed border-radius and background */
 }
 
@@ -271,7 +267,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 968px) {
+@media (max-width: 1024px) {
     .contactContent {
         grid-template-columns: 1fr;
         gap: 2rem;

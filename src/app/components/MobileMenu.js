@@ -2,12 +2,37 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./MobileMenu.module.css";
-import React from "react";
+import React, { useEffect } from "react";
 
 export default function MobileMenu({ isOpen, onToggle, onClose }) {
+  // Handle body scroll lock when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      // Lock body scroll
+      document.body.style.overflow = "hidden";
+      document.body.style.position = "fixed";
+      document.body.style.top = "0";
+      document.body.style.width = "100%";
+    } else {
+      // Restore body scroll
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+    };
+  }, [isOpen]);
+
   return (
     <>
-      {/* Hamburger Button */}
+      {/* Hamburger Button - Fixed Position */}
       <div
         className={`${styles.hamburger} ${isOpen ? styles.open : ""}`}
         onClick={onToggle}
@@ -81,7 +106,6 @@ export default function MobileMenu({ isOpen, onToggle, onClose }) {
               <span>Get Involved</span>
             </Link>
           </div>
-
           <div className={styles.navItem}>
             <Link
               href="/sponsorship"
@@ -91,13 +115,11 @@ export default function MobileMenu({ isOpen, onToggle, onClose }) {
               <span>Sponsorship</span>
             </Link>
           </div>
-
           <div className={styles.navItem}>
             <Link href="/events" className={styles.navLink} onClick={onClose}>
               <span>Events</span>
             </Link>
           </div>
-
           <div className={styles.navItem}>
             <Link
               href="/resources"

@@ -89,7 +89,7 @@ export default function ContactPage() {
           </div>
         </div>
         {/* FAQ Section */}
-        <div className={styles.faqSection} id="faq">
+        {/* <div className={styles.faqSection} id="faq">
           <h2 className={styles.sectionTitle}>Frequently Asked Questions</h2>
           <div className={styles.faqContainer}>
             {faqItems.map((item, index) => (
@@ -114,10 +114,10 @@ export default function ContactPage() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Additional Information Section */}
-        <div className={styles.additionalInfo}>
+        {/* <div className={styles.additionalInfo}>
           <div className={styles.infoCard}>
             <h3>Quick Response</h3>
             <p>
@@ -139,7 +139,7 @@ export default function ContactPage() {
               learn about opportunities.
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -79,18 +79,6 @@ export default function Footer() {
                     />
                   </Link>
                 </li>
-                <li>
-                  <Link href="/about/newsroom" className={styles.linkWithIcon}>
-                    <span>Newsroom</span>
-                    <Image
-                      width={16}
-                      height={16}
-                      src="/arrow-up-right.svg"
-                      alt="Arrow up right"
-                      className={styles.linkIcon}
-                    />
-                  </Link>
-                </li>
               </ul>
             </div>
 
@@ -109,7 +97,7 @@ export default function Footer() {
                     />
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link href="/resources" className={styles.linkWithIcon}>
                     <span>MES Magazine</span>
                     <Image
@@ -120,7 +108,7 @@ export default function Footer() {
                       className={styles.linkIcon}
                     />
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link href="/resources" className={styles.linkWithIcon}>
                     <span>Resources</span>
@@ -157,7 +145,7 @@ export default function Footer() {
             <div className={styles.linkColumn}>
               <h3 className={styles.columnTitle}>Contact</h3>
               <ul className={styles.linkList}>
-                <li>
+                {/* <li>
                   <Link href="/faqs" className={styles.linkWithIcon}>
                     <span>FAQs</span>
                     <Image
@@ -168,7 +156,7 @@ export default function Footer() {
                       className={styles.linkIcon}
                     />
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link href="/contact" className={styles.linkWithIcon}>
                     <span>Contact Us</span>

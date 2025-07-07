@@ -1,0 +1,252 @@
+/* Events Section */
+.eventsSection {
+    padding: 5rem 0;
+    background-color: #ffffff;
+}
+
+.pageTitle {
+    font-size: 3rem;
+    /* text-align: left; */
+    font-weight: bold;
+    color: #111827;
+    margin-bottom: 16px;
+    margin-top: 0;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.eventCard {
+    display: flex;
+    gap: 2.5rem;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 1px solid #f0f0f0;
+}
+
+.eventImageContainer {
+    width: 320px;
+    height: 240px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.imagePlaceholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+}
+
+.placeholderContent {
+    width: 60px;
+    height: 60px;
+    opacity: 0.4;
+}
+
+.placeholderX {
+    width: 100%;
+    height: 100%;
+}
+
+.eventContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.eventHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.eventTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333333;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.rsvpButton {
+    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+}
+
+.rsvpButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(74, 144, 226, 0.4);
+    background: linear-gradient(135deg, #357abd 0%, #2968a3 100%);
+}
+
+.eventDescription {
+    color: #666666;
+    line-height: 1.6;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.eventMeta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.metaRow {
+    display: flex;
+    gap: 2rem;
+}
+
+.metaItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #888888;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.metaIcon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666666;
+    flex-shrink: 0;
+}
+
+.metaIcon svg {
+    width: 12px;
+    height: 12px;
+}
+
+.viewAllContainer {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.viewAllBtn {
+    background-color: #89303d;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(137, 48, 61, 0.2);
+}
+
+.viewAllBtn:hover {
+    background-color: #7a2a35;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(137, 48, 61, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .eventsSection {
+        padding: 3rem 0;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .sectionTitle {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .eventCard {
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .eventImageContainer {
+        width: 100%;
+        height: 200px;
+    }
+
+    .eventHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .eventTitle {
+        font-size: 1.5rem;
+    }
+
+    .rsvpButton {
+        align-self: flex-start;
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+    }
+
+    .metaRow {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .viewAllBtn {
+        padding: 0.875rem 1.75rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .eventCard {
+        padding: 1rem;
+    }
+
+    .eventTitle {
+        font-size: 1.3rem;
+    }
+
+    .eventDescription {
+        font-size: 0.9rem;
+    }
+
+    .metaItem {
+        font-size: 0.85rem;
+    }
+}

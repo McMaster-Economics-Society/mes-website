@@ -36,136 +36,128 @@ const TeamSection = ({ title, members }) => (
 export default function TeamPage() {
   const executiveLeadership = [
     {
-      name: "Aryan Vasanis",
-      position: "President",
-      background:
-        "Honours Economics Specialist Option, Minor in Finance & Government, Certificate in Applied Social Sciences Research",
-      avatar: "/IMG_7622.jpg",
-    },
-    {
       name: "Laraib Saleem",
-      position: "VP of Communications",
+      position: "President",
       background: "Honours Economics Co-op",
-      avatar: "/LaraibS.jpg",
+      avatar: "/team-avatars/LaraibS.jpg",
     },
     {
-      name: "Imudia Alexander",
+      name: "Rebecca Adiyiah",
+      position: "VP of Communications",
+      background: "Honours Economics Co-op, Minor in Finance",
+      avatar: "/team-avatars/RebeccaA.jpg",
+    },
+    {
+      name: "Izehinosen Iyamabo",
       position: "VP of Operations",
-      background:
-        "Honours Economics, Minor in Sociology & Business Studies Certificate",
-      avatar: "/ImudiaA.jpg",
+      background: "Honours Economics Co-op",
+      avatar: "/team-avatars/IzzyI.jpg",
     },
     {
-      name: "Dui Davidsson",
+      name: "Aliza Raza",
       position: "VP of Academics",
-      background: "Honours Economics & Philosophy",
-      avatar: "/DuiD.jpg",
+      background: "Honours Economics, Minor in Business",
+      avatar: "/team-avatars/AlizaR.jpg",
     },
   ];
 
-  const academicTeam = [
-    {
-      name: "Aliza Raza",
-      position: "Academic Executive",
-      background: "Honours Economics, Minor in Business",
-      avatar: "/AlizaR.jpg",
-    },
-    {
-      name: "Afrah Khan",
-      position: "First-Year Representative",
-      background: "Economics I",
-      avatar: "/AfrahK.jpg",
-    },
-    {
-      name: "Kunal Rai",
-      position: "First-Year Representative",
-      background: "Economics I",
-      avatar: "/KunalR.jpg",
-    },
-  ];
+  // const academicTeam = [
+  //   {
+  //     name: "Aliza Raza",
+  //     position: "Academic Executive",
+  //     background: "Honours Economics, Minor in Business",
+  //     avatar: "/AlizaR.jpg",
+  //   },
+  //   {
+  //     name: "Afrah Khan",
+  //     position: "First-Year Representative",
+  //     background: "Economics I",
+  //     avatar: "/AfrahK.jpg",
+  //   },
+  //   {
+  //     name: "Kunal Rai",
+  //     position: "First-Year Representative",
+  //     background: "Economics I",
+  //     avatar: "/KunalR.jpg",
+  //   },
+  // ];
 
   const marketingTeam = [
     {
-      name: "Rebecca Adiyiah",
+      name: "Ethan Edwards",
       position: "Director of Marketing",
-      background: "Honours Economics Co-op, Minor in Finance",
-      avatar: "/RebeccaA.jpg",
+      background:
+        "Honours Economics Co-op, Minor in Finance & Political Science",
+      avatar: "/team-avatars/EthanE.jpeg",
     },
     {
       name: "Marissa Manikavasagar",
       position: "Marketing Executive",
       background: "Honours Economics Co-op, Minor in Finance",
-      avatar: "/MarissaM.jpg",
-    },
-    {
-      name: "Winnie Tang",
-      position: "Marketing Executive",
-      background:
-        "Honours Economics Co-op, Environmental Sustainability Certificate",
-      avatar: "/WinnieT.jpg",
-    },
-    {
-      name: "Ethan Edwards",
-      position: "Marketing Executive",
-      background:
-        "Honours Economics Co-op, Minor in Finance & Political Science",
-      avatar: "/MES_black.png",
+      avatar: "/team-avatars/MarissaM.jpg",
     },
     {
       name: "Roland Lightbourn",
       position: "Marketing Executive",
       background: "BA Economics, Minor in Business",
-      avatar: "/MES_black.png",
+      avatar: "/team-avatars/RolandL.jpg",
+    },
+    {
+      name: "Kunal Rai",
+      position: "First-Year Representative",
+      background: "Economics I",
+      avatar: "/team-avatars/KunalR.jpg",
     },
   ];
 
   const eventsTeam = [
     {
-      name: "Haya Mohamed",
+      name: "Chloe Wentzell",
       position: "Director of Events",
-      background:
-        "Honours Economics Specialist Option, Business Studies Certificate",
-      avatar: "/HayaM.jpg",
+      background: "Combined Honours Economics & English",
+      avatar: "/team-avatars/ChloeW.jpg",
     },
     {
       name: "Fola Olusanya",
       position: "Events Executive",
       background: "Combined Honours Economics & Kinesiology",
-      avatar: "/FolaO.jpg",
+      avatar: "/team-avatars/FolaO.jpg",
     },
+  ];
+  const outreachTeam = [
     {
-      name: "Chloe Wentzell",
-      position: "Events Executive",
-      background: "Combined Honours Economics & English",
-      avatar: "/ChloeW.jpg",
-    },
-    {
-      name: "Hridi Paul",
-      position: "Events Executive",
+      name: "Winnie Tang",
+      position: "Director of Outreach & Partnerships",
       background:
-        "Honours Economics & Computer Science, Minor in Religious Studies, Health & Wellbeing",
-      avatar: "/HridiP.jpg",
+        "Honours Economics Co-op, Environmental Sustainability Concurrent Certificate",
+      avatar: "/team-avatars/WinnieT.jpg",
+    },
+  ];
+  const financeTeam = [
+    {
+      name: "Eden Andoni",
+      position: "Director of Finance",
+      background: "BA Economics II",
+      avatar: "/team-avatars/EdenA.jpg",
     },
   ];
 
-  const financeTeam = [
+  const otherTeam = [
     {
-      name: "Karim Abi Nahed",
-      position: "Director of Finance",
-      background: "Honours Economics Specialist Option, Minor in Business",
-      avatar: "/KarimN.jpg",
+      name: "Afrah Khan",
+      position: "Internal Coordinator",
+      background: "Honors Economics Co-op",
+      avatar: "/team-avatars/AfrahK.jpg",
     },
+  ];
+
+  const magazineTeam = [
     {
-      name: "Eden Andoni",
-      position: "Finance Executive",
-      background: "BA Economics II",
-      avatar: "/EdenA.jpg",
-    },
-    {
-      name: "Izehinosen Iyambo",
-      position: "Finance Executive",
-      background: "Honours Economics Co-op",
-      avatar: "/IzzyI.jpg",
+      name: "Hridi Paul",
+      position: "Magazine Editor-In-Chief",
+      background:
+        "Honours Economics & Computer Science, Minor in Religious Studies, Health & Wellbeing",
+      avatar: "/team-avatars/HridiP.jpg",
     },
   ];
 
@@ -185,13 +177,12 @@ export default function TeamPage() {
           title="Executive Leadership"
           members={executiveLeadership}
         />
-        <TeamSection
-          title="Academic Team & First Year Representatives"
-          members={academicTeam}
-        />
         <TeamSection title="Marketing Team" members={marketingTeam} />
         <TeamSection title="Events Team" members={eventsTeam} />
+        <TeamSection title="Outreach Team" members={outreachTeam} />
         <TeamSection title="Finance Team" members={financeTeam} />
+        <TeamSection title="Coordinators" members={otherTeam} />
+        <TeamSection title="Magazine Team" members={magazineTeam} />
       </div>
     </div>
   );

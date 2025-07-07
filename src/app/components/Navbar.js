@@ -71,8 +71,8 @@ export default function Navbar() {
           <span className="logo-text">MES</span>
         </Link>
 
-        {/* Mobile Menu Component - Only shows on mobile */}
-        <div className="mobile-only">
+        {/* Mobile Menu Component */}
+        <div className="mobile-menu-container">
           <MobileMenu
             isOpen={isMobileMenuOpen}
             onToggle={toggleMobileMenu}
@@ -98,10 +98,10 @@ export default function Navbar() {
                     {item.dropdown && (
                       <span className="dropdown-arrow">
                         <Image
-                          src="/caret-down.svg"
-                          width={20}
-                          height={20}
-                          alt="Caret Down"
+                          src="/chevron-down.svg"
+                          width={15}
+                          height={15}
+                          alt="Chevron Down"
                         />
                       </span>
                     )}
@@ -133,26 +133,6 @@ export default function Navbar() {
           Contact Us
         </Link>
       </div>
-
-      <style jsx>{`
-        .mobile-only {
-          display: none;
-        }
-
-        @media (max-width: 768px) {
-          .mobile-only {
-            display: block;
-          }
-
-          .nav-center {
-            display: none;
-          }
-
-          .contact-btn {
-            display: none;
-          }
-        }
-      `}</style>
     </nav>
   );
 }
