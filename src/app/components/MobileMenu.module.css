@@ -168,7 +168,7 @@
 /* Menu Content - Enhanced scroll handling with space for fixed header */
 .menuContent {
     flex: 1;
-    padding: 2rem 1rem 1rem 1rem;
+    padding: 2rem 0 1rem 1rem; /* Remove right padding to allow alignment */
     margin-top: 80px; /* Space for fixed header */
     overflow-y: auto; /* Allow internal scrolling if content is too long */
     overscroll-behavior: contain; /* Prevent scroll chaining to body */
@@ -177,7 +177,8 @@
 /* Navigation Items */
 .navItem {
     border-bottom: 1px solid #e5e5e5;
-    padding: 1.5rem 0;
+    padding: 1.5rem 1rem 1.5rem 0; /* Add right padding, remove left */
+    margin-right: 1rem;
 }
 
 .navItem:last-child {
@@ -191,12 +192,14 @@
     color: #89303d;
     text-decoration: none;
     font-size: 1.25rem;
-    font-weight: 400;
+    font-weight: 500;
     cursor: pointer;
 }
 
 .navLink:hover {
-    color: #89303d;
+    color: #fad4d4;
+    font-weight: 600;
+    text-decoration: underline;
 }
 
 /* Dropdown Toggle */
@@ -211,6 +214,7 @@
     border-bottom: 2px solid #89303d;
     transform: rotate(225deg); /* Default expanded state */
     transition: transform 0.3s ease;
+    margin-right: 0.4rem; /* Add right margin to align with hamburger */
 }
 
 .dropdownToggle:not(:checked) + .navLink .dropdownArrow {
@@ -243,21 +247,24 @@
 }
 
 .dropdownLink:hover {
-    color: #89303d;
+    color: #fad4d4;
+    font-weight: 500;
+    text-decoration: underline;
 }
 
 /* Contact Button */
 .contactSection {
-    padding: 1rem;
+    padding: 1rem 1rem 1rem 1rem; /* Keep consistent padding */
     margin-top: auto;
     flex-shrink: 0; /* Prevent shrinking */
 }
 
 .contactBtn {
     display: block;
-    width: 100%;
+    width: calc(100% - 1rem);
     background: #89303d;
     margin-bottom: 2rem;
+    margin-right: 1rem;
     color: white;
     padding: 1rem 2rem;
     border: none;
