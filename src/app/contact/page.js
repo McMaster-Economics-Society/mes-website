@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import styles from "./ContactPage.module.css";
-
+import Head from "next/head";
 export default function ContactPage() {
   const [openFAQ, setOpenFAQ] = useState(null);
 
@@ -63,33 +63,41 @@ export default function ContactPage() {
   ];
 
   return (
-    <div className={styles.pageContainer}>
-      <div className={styles.contentWrapper}>
-        {/* Page Header */}
-        <div className={styles.pageHeader}>
-          <h1 className={styles.pageTitle}>Contact Us</h1>
-          <p className={styles.pageSubtitle}>
-            Get in touch with the McMaster Economics Society
-          </p>
-        </div>
-        {/* Centered Contact Form */}
-        <div className={styles.contactForm}>
-          <h2 className={styles.sectionTitle}>Send us a Message</h2>
-          <p className={styles.formDescription}>
-            Have a question or want to get involved? Fill out the form below and
-            we&apos;ll get back to you as soon as possible.
-          </p>
-          <div className={styles.formContainer}>
-            <iframe
-              className={styles.contactIframe}
-              id="contact-form-x3g55v"
-              src="https://opnform.com/forms/contact-form-x3g55v"
-              title="Contact Form"
-            />
+    <>
+      <Head>
+        <title>Contact Us | McMaster Economics Society</title>
+        <meta
+          name="description"
+          content="Contact McMaster Economics Society to explore sponsorship opportunities, join our community, or get involved in economics events and initiatives. Connect with us today!"
+        />
+      </Head>
+      <div className={styles.pageContainer}>
+        <div className={styles.contentWrapper}>
+          {/* Page Header */}
+          <div className={styles.pageHeader}>
+            <h1 className={styles.pageTitle}>Contact Us</h1>
+            <p className={styles.pageSubtitle}>
+              Get in touch with the McMaster Economics Society
+            </p>
           </div>
-        </div>
-        {/* FAQ Section */}
-        {/* <div className={styles.faqSection} id="faq">
+          {/* Centered Contact Form */}
+          <div className={styles.contactForm}>
+            <h2 className={styles.sectionTitle}>Send us a Message</h2>
+            <p className={styles.formDescription}>
+              Have a question or want to get involved? Fill out the form below
+              and our team will get back to you as soon as possible.
+            </p>
+            <div className={styles.formContainer}>
+              <iframe
+                className={styles.contactIframe}
+                id="contact-form-x3g55v"
+                src="https://opnform.com/forms/contact-form-x3g55v"
+                title="Contact Form"
+              />
+            </div>
+          </div>
+          {/* FAQ Section */}
+          {/* <div className={styles.faqSection} id="faq">
           <h2 className={styles.sectionTitle}>Frequently Asked Questions</h2>
           <div className={styles.faqContainer}>
             {faqItems.map((item, index) => (
@@ -116,8 +124,8 @@ export default function ContactPage() {
           </div>
         </div> */}
 
-        {/* Additional Information Section */}
-        {/* <div className={styles.additionalInfo}>
+          {/* Additional Information Section */}
+          {/* <div className={styles.additionalInfo}>
           <div className={styles.infoCard}>
             <h3>Quick Response</h3>
             <p>
@@ -140,7 +148,8 @@ export default function ContactPage() {
             </p>
           </div>
         </div> */}
+        </div>
       </div>
-    </div>
+    </>
   );
 }

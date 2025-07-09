@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./MeetOurTeamPage.module.css";
-
+import Head from "next/head";
 const TeamMember = ({ name, position, background, avatar }) => (
   <div className={styles.teamMember}>
     <div className={styles.avatarContainer}>
@@ -162,28 +162,37 @@ export default function TeamPage() {
   ];
 
   return (
-    <div className={styles.pageContainer}>
-      <div className={styles.contentWrapper}>
-        {/* Page Header */}
-        <div className={styles.pageHeader}>
-          <h1 className={styles.pageTitle}>Meet our Team</h1>
-          <p className={styles.pageSubtitle}>
-            Let&apos;s get to know the people leading the way at MES!
-          </p>
-        </div>
-
-        {/* Team Sections */}
-        <TeamSection
-          title="Executive Leadership"
-          members={executiveLeadership}
+    <>
+      <Head>
+        <title>Meet Our Team | McMaster Economics Society</title>
+        <meta
+          name="description"
+          content="Learn about the McMaster Economics Society - our mission, values, and impact on student life."
         />
-        <TeamSection title="Marketing Team" members={marketingTeam} />
-        <TeamSection title="Events Team" members={eventsTeam} />
-        <TeamSection title="Outreach Team" members={outreachTeam} />
-        <TeamSection title="Finance Team" members={financeTeam} />
-        <TeamSection title="Coordinators" members={otherTeam} />
-        <TeamSection title="Magazine Team" members={magazineTeam} />
+      </Head>
+      <div className={styles.pageContainer}>
+        <div className={styles.contentWrapper}>
+          {/* Page Header */}
+          <div className={styles.pageHeader}>
+            <h1 className={styles.pageTitle}>Meet our Team</h1>
+            <p className={styles.pageSubtitle}>
+              Let&apos;s get to know the people leading the way at MES!
+            </p>
+          </div>
+
+          {/* Team Sections */}
+          <TeamSection
+            title="Executive Leadership"
+            members={executiveLeadership}
+          />
+          <TeamSection title="Marketing Team" members={marketingTeam} />
+          <TeamSection title="Events Team" members={eventsTeam} />
+          <TeamSection title="Outreach Team" members={outreachTeam} />
+          <TeamSection title="Finance Team" members={financeTeam} />
+          <TeamSection title="Coordinators" members={otherTeam} />
+          <TeamSection title="Magazine Team" members={magazineTeam} />
+        </div>
       </div>
-    </div>
+    </>
   );
 }

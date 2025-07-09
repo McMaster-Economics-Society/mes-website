@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { allEvents } from "@/app/data/events-database.js";
 import styles from "./EventsPage.module.css";
-
+import Head from "next/head";
 const EventsPage = () => {
   const EventCard = ({ event }) => (
     <div className={styles.eventCard}>
@@ -117,22 +117,32 @@ const EventsPage = () => {
   );
 
   return (
-    <section className={styles.eventsSection}>
-      <div className={styles.container}>
-        <h1 className={styles.pageTitle}>All Events</h1>
-        <p className={styles.pageDescription}>
-          Discover all upcoming events organized by the McMaster Economics
-          Society. From study sessions to guest speakers, we have something for
-          everyone!
-        </p>
+    <>
+      <Head>
+        <title>Events | McMaster Economics Society</title>
+        <meta
+          name="description"
+          content="Discover all upcoming events organized by the McMaster Economics
+          Society!"
+        />
+      </Head>
+      <section className={styles.eventsSection}>
+        <div className={styles.container}>
+          <h1 className={styles.pageTitle}>All Events</h1>
+          <p className={styles.pageDescription}>
+            Discover all upcoming events organized by the McMaster Economics
+            Society. From study sessions to guest speakers, we have something
+            for everyone!
+          </p>
 
-        <div className={styles.eventsGrid}>
-          {allEvents.map((event) => (
-            <EventCard key={event.id} event={event} />
-          ))}
+          <div className={styles.eventsGrid}>
+            {allEvents.map((event) => (
+              <EventCard key={event.id} event={event} />
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

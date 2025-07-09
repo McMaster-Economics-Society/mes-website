@@ -95,7 +95,7 @@
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(2, auto);
-    column-gap: 8px;
+    column-gap: 20px;
     padding: 1.5rem; /* Added padding inside each item */
     border-radius: 12px; /* Added rounded corners */
     background-color: #ffffff; /* White background for each item */
@@ -115,6 +115,9 @@
     align-items: center;
     justify-content: right;
     border-radius: 8px;
+    display: flex;
+    padding-bottom: 10px;
+    justify-content: center;
 }
 
 .missionTitle {
@@ -274,7 +277,7 @@
 }
 
 /* General Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 965px) {
     .pageContainer {
         padding: 1rem 0;
     }
@@ -329,8 +332,18 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 488px) {
     .groupPhoto:hover {
         transform: none; /* Disable hover effect on mobile */
+    }
+
+    .missionIcon {
+        display: flex;
+        padding-bottom: 10px;
+        justify-content: center;
+    }
+
+    .missionItem {
+        display: block;
     }
 }

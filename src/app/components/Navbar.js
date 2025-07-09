@@ -117,7 +117,11 @@ export default function Navbar() {
                   >
                     {item.dropdown.map((subItem, subIndex) => (
                       <li key={subIndex} className="dropdown-item">
-                        <Link href={subItem.href} className="dropdown-link">
+                        <Link
+                          href={subItem.href}
+                          className="dropdown-link"
+                          prefetch={subItem.name === "About MES"} // Next.js will prefetch this page
+                        >
                           {subItem.name}
                         </Link>
                       </li>

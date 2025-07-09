@@ -1,0 +1,115 @@
+/* PDF Container */
+.pdfContainer {
+    position: relative;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 1px solid #e9ecef;
+    /* Ensure proper sizing */
+    box-sizing: border-box;
+    /* Add spacing from footer */
+    margin-bottom: 3rem;
+    /* Align with navbar max-width */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Desktop and large tablets */
+@media (min-width: 1024px) {
+    .pdfContainer {
+        height: 85vh;
+        min-height: 700px;
+        /* Remove individual margin settings since they're handled globally now */
+    }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .pdfContainer {
+        height: 80vh;
+        min-height: 600px;
+        /* Use responsive margins for tablets */
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-bottom: 3rem;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 767px) {
+    .pdfContainer {
+        height: 75vh;
+        min-height: 500px;
+        margin: 0 auto 2rem auto;
+        max-width: calc(100vw - 48px);
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .pdfContainer {
+        height: 70vh;
+        min-height: 450px;
+        margin: 0 auto 1.5rem auto;
+        max-width: calc(100vw - 24px);
+    }
+}
+
+/* PDF Object and Iframe - Critical for proper display */
+.pdfObject,
+.responsiveIframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+    background: #f8f9fa;
+    /* Ensure proper rendering */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+}
+
+/* Page Title */
+.pageTitle {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    text-align: left;
+    font-weight: bold;
+    color: #111827;
+    margin-bottom: 1.5rem;
+    margin-top: 80px;
+    line-height: 1.2;
+    /* Align with navbar logo */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 2rem;
+}
+
+/* Loading Container */
+.loadingContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    background: #f8f9fa;
+    border-radius: 8px;
+    color: #6c757d;
+}
+
+/* Responsive page title adjustments */
+@media (max-width: 1023px) {
+    .pageTitle {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .pageTitle {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}

@@ -3,14 +3,13 @@
 .hamburger {
     /* padding: 0.5rem; */
     z-index: 1002;
-    position: fixed; /* Changed from relative to fixed */
-    top: 1rem; /* Added top positioning */
+    position: absolute; /* Changed from relative to fixed */
+    top: 0.55rem; /* Added top positioning */
     right: 1rem; /* Added right positioning */
     display: flex;
     flex-direction: column;
     gap: 4px;
     width: 60px;
-    height: 40px;
     scale: 0.7;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -151,14 +150,13 @@
     align-items: center;
     border-bottom: 1px solid #e5e5e5;
     z-index: 1001; /* Below hamburger but above menu content */
-    height: 80px; /* Fixed height to match navbar */
     box-sizing: border-box;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.5rem;
 }
 
 .logoText {

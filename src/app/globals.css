@@ -68,6 +68,7 @@ a {
     font-weight: bold;
     text-decoration: none;
     color: #333333;
+    margin-left: 1rem;
 }
 
 .logo-text {
@@ -198,8 +199,8 @@ a {
 }
 
 .dropdown-link:hover {
-    background-color: #f8f9fa; /* Changed from #3a3a3a to light gray */
-    color: #89303d; /* Changed to match your brand color */
+    background-color: #89303d; /* Changed from #3a3a3a to light gray */
+    color: #ffffff; /* Changed to match your brand color */
     font-weight: 500;
     transform: translateX(2px); /* Reduced from 4px */
 }
@@ -241,6 +242,7 @@ a {
     font-weight: 500;
     font-size: 0.95rem;
     transition: background-color 0.3s ease;
+    margin-right: 1rem;
 }
 
 .contact-btn:hover {
@@ -261,11 +263,16 @@ a {
 
     .contact-btn {
         display: none;
+        margin-left: 0;
     }
 
     /* Show mobile menu container */
     .mobile-menu-container {
         display: block;
+    }
+
+    .logo {
+        margin-left: 0;
     }
 }
 
