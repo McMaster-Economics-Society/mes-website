@@ -7,7 +7,7 @@ export const allEvents = [
     location: "LRW 3001",
     date: "April 2, 2025",
     time: "6:00 PM",
-    image: "/event-images/post.png",
+    image: "/event-images/study_hall_event.png",
     imageAlt: "Students studying together in a classroom",
   },
   // {

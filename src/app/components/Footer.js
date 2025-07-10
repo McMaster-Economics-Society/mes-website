@@ -146,7 +146,7 @@ export default function Footer() {
               <h3 className={styles.columnTitle}>Contact</h3>
               <ul className={styles.linkList}>
                 {/* <li>
-                  <Link href="/faqs" className={styles.linkWithIcon}>
+                  <Link href="#" className={styles.linkWithIcon}>
                     <span>FAQs</span>
                     <Image
                       width={16}

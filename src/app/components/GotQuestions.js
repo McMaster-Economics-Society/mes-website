@@ -12,7 +12,7 @@ export default function GotQuestions() {
           </p>
         </div>
         <div className={styles.buttons}>
-          <Link href="/resources" className={styles.faqsBtn}>
+          <Link href="#" className={styles.faqsBtn}>
             FAQs
           </Link>
           <Link href="/contact" className={styles.contactBtn}>
