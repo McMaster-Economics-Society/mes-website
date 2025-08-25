@@ -39,6 +39,7 @@ export default function GetInvolved() {
       requirements: [
         "Attend monthly team meetings or sit in on team-specific planning sessions",
         "Shadow one or more teams based on interest",
+        "Supports all teams",
         "Submit one passion project idea and execute with support",
       ],
       responsibilities: [
@@ -58,11 +59,12 @@ export default function GetInvolved() {
     },
     {
       id: "academic-exec",
-      title: "Academic Executive",
+      title: "Academic Executive (1-2 positions)",
       description:
         "Bring MES's educational and professional events to life. Own and execute programming that helps students thrive. For anyone interested in teaching, research, policy, or grad school",
       icon: "🎓",
-      applicationLink: null,
+      applicationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSeGMC6XP3EL63tcVSSvSCWuF__BfTcdtbO7atoaesPdQ3gEUw/viewform",
       requirements: [
         "Reports to VP Academics",
         "Works with Marketing Team, Director of Events",
@@ -86,7 +88,8 @@ export default function GetInvolved() {
       description:
         "The backbone of MES programming, responsible for helping ideate, plan, and execute events both large and small. This role requires initiative, ownership, and proactive follow-through. Not 'helpers', but 'co-organizers'",
       icon: "📅",
-      applicationLink: null,
+      applicationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSeGMC6XP3EL63tcVSSvSCWuF__BfTcdtbO7atoaesPdQ3gEUw/viewform",
       requirements: [
         "Reports to Director of Events",
         "Works with VP Operations, Finance Team, Marketing Team",
@@ -110,11 +113,12 @@ export default function GetInvolved() {
     },
     {
       id: "finance-exec",
-      title: "Finance Executive",
+      title: "Finance Executive (2 Positions)",
       description:
         "The 'hands-on financial stewards' of MES, working closely with Director of Finance to manage records, assist with event budgeting, and track sponsorship-related deliverables. Ensure every dollar is accounted for and well-spent",
       icon: "💰",
-      applicationLink: null,
+      applicationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSeGMC6XP3EL63tcVSSvSCWuF__BfTcdtbO7atoaesPdQ3gEUw/viewform",
       requirements: [
         "Reports to Director of Finance",
         "Works with VP Operations, Events Team, Sponsorship Outreach",
@@ -136,11 +140,12 @@ export default function GetInvolved() {
     },
     {
       id: "marketing-exec",
-      title: "Marketing Executive",
+      title: "Marketing Executive (2-4 positions)",
       description:
         "The 'creative engines' behind MES's public presence. Design posts, write captions, help manage social media platforms, and shape how we connect with students. Ideal for someone who wants to build a portfolio in communications, design, or digital media",
       icon: "📢",
-      applicationLink: null,
+      applicationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSeGMC6XP3EL63tcVSSvSCWuF__BfTcdtbO7atoaesPdQ3gEUw/viewform",
       requirements: [
         "Reports to Director of Marketing",
         "Works with Media Design Coordinators, VP Communications",
@@ -192,7 +197,9 @@ export default function GetInvolved() {
   return (
     <>
       <Head>
-        <title>Get Involved - McMaster Economics Society</title>
+        <title>
+          Get Involved | McMaster Economics Society - We are Hiring!
+        </title>
         <meta
           name="description"
           content="Join the McMaster Economics Society and become part of a vibrant community dedicated to economic education and professional development."
@@ -216,11 +223,11 @@ export default function GetInvolved() {
         {/* Alert Banner */}
         <div className={styles.alertBanner}>
           <div className={styles.alertContent}>
-            <div className={styles.alertIcon}>⚠️</div>
+            <div className={styles.alertIcon}>❗❗❗</div>
             <div className={styles.alertText}>
               <p>
-                We are not hiring at the moment, but please stay informed by
-                following our social media:
+                We are hiring right now! DEADLINE TO APPLY: Friday, August 29 at
+                11:59 p.m.
               </p>
             </div>
             <div className={styles.socialLinks}>
@@ -279,7 +286,12 @@ export default function GetInvolved() {
                 <div className={styles.cardHeader}>
                   <div className={styles.cardIcon}>{opportunity.icon}</div>
                   <div className={styles.cardTitleSection}>
-                    <h3 className={styles.cardTitle}>{opportunity.title}</h3>
+                    <div className={styles.titleRow}>
+                      <h3 className={styles.cardTitle}>{opportunity.title}</h3>
+                      {opportunity.applicationLink && (
+                        <span className={styles.hiringLabel}>HIRING!</span>
+                      )}
+                    </div>
                     <p className={styles.cardDescription}>
                       {opportunity.description}
                     </p>
@@ -347,9 +359,20 @@ export default function GetInvolved() {
                 </div>
 
                 <div className={styles.cardFooter}>
-                  <button className={styles.applyButton} disabled>
-                    Apply Now
-                  </button>
+                  {opportunity.applicationLink ? (
+                    <a
+                      href={opportunity.applicationLink}
+                      className={styles.applyButtonLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Apply Now
+                    </a>
+                  ) : (
+                    <button className={styles.applyButton} disabled>
+                      Apply Now
+                    </button>
+                  )}
                 </div>
               </div>
             ))}

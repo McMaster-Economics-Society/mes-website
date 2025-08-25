@@ -48,7 +48,15 @@ const LatestEvent = () => {
           <div className={styles.eventContent}>
             <div className={styles.eventHeader}>
               <h3 className={styles.eventTitle}>{latestEvent.title}</h3>
-              <button className={styles.rsvpButton}>RSVP</button>
+              {/* Replace button with link */}
+              <a
+                href={latestEvent.rsvpUrl}
+                className={styles.rsvpButton}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                RSVP
+              </a>
             </div>
 
             <p className={styles.eventDescription}>{latestEvent.description}</p>

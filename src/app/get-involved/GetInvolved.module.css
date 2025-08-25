@@ -32,8 +32,8 @@
 }
 
 .alertBanner {
-    background: #fefbf3;
-    border-left: 4px solid #f59e0b;
+    background: #f0fdf4; /*fefbf3*/
+    border-left: 4px solid #22c55e; /*Orange colour for not hiring: #f59e0b*/
     max-width: 1200px;
     margin: 1.5rem auto;
     padding: 1rem;
@@ -56,8 +56,8 @@
 }
 
 .alertText p {
-    color: #92400e;
-    font-weight: 500;
+    color: #166534; /*#92400e*/
+    font-weight: 600;
     margin: 0;
 }
 
@@ -67,12 +67,12 @@
 }
 
 .socialLink {
-    color: #d97706;
+    color: #16a34a; /* #d97706*/
     transition: color 0.2s;
 }
 
 .socialLink:hover {
-    color: #92400e;
+    color: #166534; /*#92400e*/
 }
 
 /* Team Photo Section */
@@ -179,6 +179,34 @@
     margin-bottom: 1.5rem;
 }
 
+.titleRow {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.cardTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0; /* Remove default margin since we're handling spacing with titleRow */
+}
+
+.hiringLabel {
+    background: #16a34a; /* Green to match alert banner */
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px; /* Full rounded capsule */
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    white-space: nowrap;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
 .cardIcon {
     font-size: 2rem;
     background: white;
@@ -253,6 +281,7 @@
     border-top: 1px solid #e5e7eb;
 }
 
+/* Disabled button (for positions without application links) */
 .applyButton {
     width: 100%;
     background: #c68a95;
@@ -266,26 +295,31 @@
     transition: background-color 0.2s;
 }
 
+/* Active application link button (for positions with application links) */
 .applyButtonLink {
     display: block;
     width: 100%;
-    background: #89303d;
+    background: #000000; /* Warm amber/gold that complements burgundy */
     color: white;
-    padding: 0.75rem 1rem;
+    padding: 1rem 1rem;
     border: none;
     border-radius: 0.5rem;
-    font-weight: 500;
+    font-weight: 600;
     text-decoration: none;
     text-align: center;
     transition: all 0.2s;
     cursor: pointer;
+    box-sizing: border-box;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .applyButtonLink:hover {
-    background: #6b2f31;
+    color: #000000;
+    background: #ffffff; /* Deeper amber on hover */
     transform: translateY(-1px);
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
-
 .callToAction {
     text-align: center;
     margin-top: 4rem;

@@ -1,14 +1,24 @@
 export const allEvents = [
   {
     id: 1,
+    title: "Faculty Fest",
+    location: "Burke Science Building (BSB) Field",
+    date: "September 25, 2025",
+    time: "1:30PM - 5:30PM",
+    image: "/event-images/faculty_fest_event.png",
+    imageAlt: "A building in McMaster University",
+    rsvpUrl:
+      "https://https://linktr.ee/McMasterEconSociety?fbclid=PAZXh0bgNhZW0CMTEAAac1uJC31qw4sH7oaOhm87CWnDARUvgzmTtaEV6Q60gv_u41ft_mwtlGJlGp4w_aem_1VufqlZfWrpdcZ4fAiOTgw", // Add your actual RSVP link
+  },
+  {
+    id: 2,
     title: "Study Hall",
-    description:
-      "Join us for our weekly study session where economics students can collaborate, share notes, and get help with coursework. Bring your textbooks, assignments, and questions. Our executive team and senior students will be available to provide guidance and support.",
+    description: "Join us for our weekly study session...",
     location: "LRW 3001",
     date: "April 2, 2025",
-    time: "6:00 PM",
+    time: "6:00PM",
     image: "/event-images/study_hall_event.png",
-    imageAlt: "Students studying together in a classroom",
+    imageAlt: "Students studying together in a classroom", // Add your actual RSVP link
   },
   // {
   //   id: 2,

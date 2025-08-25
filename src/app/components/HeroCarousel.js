@@ -13,7 +13,6 @@ const HeroCarousel = () => {
     "/hero-carousel/MEETTHEPROFS-37.jpg",
     "/hero-carousel/MESxPHILSOC-3.jpg",
     "/hero-carousel/MESxPHILSOC-4.jpg",
-    "apple-icon.png",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

@@ -20,7 +20,15 @@ const EventsPage = () => {
       <div className={styles.eventContent}>
         <div className={styles.eventHeader}>
           <h3 className={styles.eventTitle}>{event.title}</h3>
-          <button className={styles.rsvpButton}>RSVP</button>
+          {/* Replace button with link */}
+          <a
+            href={event.rsvpUrl}
+            className={styles.rsvpButton}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            RSVP
+          </a>
         </div>
 
         <p className={styles.eventDescription}>{event.description}</p>
