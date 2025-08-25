@@ -72,9 +72,13 @@ const HeroCarousel = () => {
           <span className={styles.heroTo}>to</span>
           <span className={styles.heroMain}>McMaster Economics Society</span>
         </h1>
-        <Link href="/about/about-mes" className={styles.heroCta}>
-          Learn more
+        <Link href="/about/get-involved" className={styles.heroCta}>
+          Join us! - We are hiring
         </Link>
+        {/* Below is for non-hiring status*/}
+        {/* <Link href="/about/about-mes" className={styles.heroCta}>
+          Learn more
+        </Link>*/}
       </div>
 
       {/* Navigation Arrows */}
