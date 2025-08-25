@@ -2,36 +2,43 @@ import Image from "next/image";
 import { allEvents } from "@/app/data/events-database.js";
 import styles from "./EventsPage.module.css";
 import Head from "next/head";
+
 const EventsPage = () => {
   const EventCard = ({ event }) => (
     <div className={styles.eventCard}>
-      <div className={styles.eventImageContainer}>
-        <div className={styles.imagePlaceholder}>
-          <Image
-            src={event.image}
-            alt={event.imageAlt}
-            width={500}
-            height={300}
-            className={styles.eventImage}
-          />
+      {event.image && (
+        <div className={styles.eventImageContainer}>
+          <div className={styles.imagePlaceholder}>
+            <Image
+              src={event.image}
+              alt={event.imageAlt || `${event.title} event image`}
+              width={500}
+              height={300}
+              className={styles.eventImage}
+            />
+          </div>
         </div>
-      </div>
+      )}
 
       <div className={styles.eventContent}>
         <div className={styles.eventHeader}>
           <h3 className={styles.eventTitle}>{event.title}</h3>
-          {/* Replace button with link */}
-          <a
-            href={event.rsvpUrl}
-            className={styles.rsvpButton}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            RSVP
-          </a>
+          {/* Only show RSVP button if rsvpUrl exists */}
+          {event.rsvpUrl && (
+            <a
+              href={event.rsvpUrl}
+              className={styles.rsvpButton}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              RSVP
+            </a>
+          )}
         </div>
 
-        <p className={styles.eventDescription}>{event.description}</p>
+        {event.description && (
+          <p className={styles.eventDescription}>{event.description}</p>
+        )}
 
         <div className={styles.eventMeta}>
           <div className={styles.metaRow}>
@@ -130,8 +137,7 @@ const EventsPage = () => {
         <title>Events | McMaster Economics Society</title>
         <meta
           name="description"
-          content="Discover all upcoming events organized by the McMaster Economics
-          Society!"
+          content="Discover all upcoming events organized by the McMaster Economics Society!"
         />
       </Head>
       <section className={styles.eventsSection}>

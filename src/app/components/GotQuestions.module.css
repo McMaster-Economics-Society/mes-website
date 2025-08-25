@@ -46,7 +46,8 @@
 }
 
 .faqsBtn:hover {
-    background-color: #893000;
+    color: #000000;
+    background-color: #c64962;
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(74, 144, 226, 0.3);
 }

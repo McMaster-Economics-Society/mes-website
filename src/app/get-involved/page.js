@@ -35,7 +35,8 @@ export default function GetInvolved() {
       description:
         "Introduce passionate new students to the society's structure, values, and initiatives. Reps shadow teams, participate in planning, and grow into execs in future years",
       icon: "📚",
-      applicationLink: null,
+      applicationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSeGMC6XP3EL63tcVSSvSCWuF__BfTcdtbO7atoaesPdQ3gEUw/viewform",
       requirements: [
         "Attend monthly team meetings or sit in on team-specific planning sessions",
         "Shadow one or more teams based on interest",

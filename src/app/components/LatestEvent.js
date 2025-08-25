@@ -7,59 +7,56 @@ const LatestEvent = () => {
   // Get only the first event (latest upcoming event)
   const latestEvent = allEvents[0];
 
+  // Don't render anything if no events exist
+  if (!latestEvent) {
+    return null;
+  }
+
   return (
     <section className={styles.eventsSection}>
       <div className={styles.container}>
         <h2 className={styles.sectionTitle}>Upcoming Events</h2>
 
         <div className={styles.eventCard}>
-          <div className={styles.eventImageContainer}>
-            <div className={styles.imagePlaceholder}>
-              <Image
-                src={latestEvent.image}
-                alt={latestEvent.imageAlt}
-                width={100}
-                height={200}
-                layout="responsive"
-              />
-              <div className={styles.placeholderContent}>
-                <svg viewBox="0 0 100 100" className={styles.placeholderX}>
-                  <line
-                    x1="20"
-                    y1="20"
-                    x2="80"
-                    y2="80"
-                    stroke="#ccc"
-                    strokeWidth="2"
-                  />
-                  <line
-                    x1="80"
-                    y1="20"
-                    x2="20"
-                    y2="80"
-                    stroke="#ccc"
-                    strokeWidth="2"
-                  />
-                </svg>
+          {/* Only render image container if image exists */}
+          {latestEvent.image && (
+            <div className={styles.eventImageContainer}>
+              <div className={styles.imagePlaceholder}>
+                <Image
+                  src={latestEvent.image}
+                  alt={
+                    latestEvent.imageAlt || `${latestEvent.title} event image`
+                  }
+                  width={320}
+                  height={240}
+                  className={styles.eventImage}
+                />
               </div>
             </div>
-          </div>
+          )}
 
           <div className={styles.eventContent}>
             <div className={styles.eventHeader}>
               <h3 className={styles.eventTitle}>{latestEvent.title}</h3>
-              {/* Replace button with link */}
-              <a
-                href={latestEvent.rsvpUrl}
-                className={styles.rsvpButton}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                RSVP
-              </a>
+              {/* Only show RSVP button if rsvpUrl exists */}
+              {latestEvent.rsvpUrl && (
+                <a
+                  href={latestEvent.rsvpUrl}
+                  className={styles.rsvpButton}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  RSVP
+                </a>
+              )}
             </div>
 
-            <p className={styles.eventDescription}>{latestEvent.description}</p>
+            {/* Only render description if it exists */}
+            {latestEvent.description && (
+              <p className={styles.eventDescription}>
+                {latestEvent.description}
+              </p>
+            )}
 
             <div className={styles.eventMeta}>
               <div className={styles.metaRow}>

@@ -1,24 +1,23 @@
 export const allEvents = [
   {
     id: 1,
+    title: "Club Fest",
+    description:
+      "Come join us at Club Fest in person to find out more about our club and its activities!",
+    location: "Mills Plaza and BSB Field",
+    date: "September 17-18, 2025",
+    time: "10:00AM - 3:00PM",
+    image: "/event-images/club_fest_event.jpeg",
+    imageAlt: "BSB field in McMaster University",
+  },
+  {
+    id: 2,
     title: "Faculty Fest",
     location: "Burke Science Building (BSB) Field",
     date: "September 25, 2025",
     time: "1:30PM - 5:30PM",
     image: "/event-images/faculty_fest_event.png",
     imageAlt: "A building in McMaster University",
-    rsvpUrl:
-      "https://linktr.ee/McMasterEconSociety?fbclid=PAZXh0bgNhZW0CMTEAAac1uJC31qw4sH7oaOhm87CWnDARUvgzmTtaEV6Q60gv_u41ft_mwtlGJlGp4w_aem_1VufqlZfWrpdcZ4fAiOTgw", // Add your actual RSVP link
-  },
-  {
-    id: 2,
-    title: "Study Hall",
-    description: "Join us for our weekly study session...",
-    location: "LRW 3001",
-    date: "April 2, 2025",
-    time: "6:00PM",
-    image: "/event-images/study_hall_event.png",
-    imageAlt: "Students studying together in a classroom", // Add your actual RSVP link
   },
   // {
   //   id: 2,
@@ -30,6 +29,9 @@ export const allEvents = [
   //   time: "7:00 PM",
   //   image: "/event-images/post.png",
   //   imageAlt: "Guest speaker presenting to students",
+  //   rsvpUrl:
+  //"https://linktr.ee/McMasterEconSociety?fbclid=PAZXh0bgNhZW0CMTEAAac1uJC31qw4sH7oaOhm87CWnDARUvgzmTtaEV6Q60gv_u41ft_mwtlGJlGp4w_aem_1VufqlZfWrpdcZ4fAiOTgw", // Add your actual RSVP link
+
   // },
   // {
   //   id: 3,
