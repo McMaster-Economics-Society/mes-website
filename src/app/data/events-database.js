@@ -8,7 +8,7 @@ export const allEvents = [
     image: "/event-images/faculty_fest_event.png",
     imageAlt: "A building in McMaster University",
     rsvpUrl:
-      "https://https://linktr.ee/McMasterEconSociety?fbclid=PAZXh0bgNhZW0CMTEAAac1uJC31qw4sH7oaOhm87CWnDARUvgzmTtaEV6Q60gv_u41ft_mwtlGJlGp4w_aem_1VufqlZfWrpdcZ4fAiOTgw", // Add your actual RSVP link
+      "https://linktr.ee/McMasterEconSociety?fbclid=PAZXh0bgNhZW0CMTEAAac1uJC31qw4sH7oaOhm87CWnDARUvgzmTtaEV6Q60gv_u41ft_mwtlGJlGp4w_aem_1VufqlZfWrpdcZ4fAiOTgw", // Add your actual RSVP link
   },
   {
     id: 2,
