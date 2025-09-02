@@ -16,7 +16,7 @@ export const allEvents = [
     location: "Burke Science Building (BSB) Field",
     date: "September 25, 2025",
     time: "1:30PM - 5:30PM",
-    image: "/event-images/faculty_fest_event.png",
+    image: "/event-images/faculty_fest_event.jpeg",
     imageAlt: "A building in McMaster University",
   },
   // {

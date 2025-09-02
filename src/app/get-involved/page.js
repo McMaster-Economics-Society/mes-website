@@ -35,8 +35,7 @@ export default function GetInvolved() {
       description:
         "Introduce passionate new students to the society's structure, values, and initiatives. Reps shadow teams, participate in planning, and grow into execs in future years",
       icon: "📚",
-      applicationLink:
-        "https://docs.google.com/forms/d/e/1FAIpQLSeGMC6XP3EL63tcVSSvSCWuF__BfTcdtbO7atoaesPdQ3gEUw/viewform",
+      applicationLink: null,
       requirements: [
         "Attend monthly team meetings or sit in on team-specific planning sessions",
         "Shadow one or more teams based on interest",
@@ -64,8 +63,7 @@ export default function GetInvolved() {
       description:
         "Bring MES's educational and professional events to life. Own and execute programming that helps students thrive. For anyone interested in teaching, research, policy, or grad school",
       icon: "🎓",
-      applicationLink:
-        "https://docs.google.com/forms/d/e/1FAIpQLSeGMC6XP3EL63tcVSSvSCWuF__BfTcdtbO7atoaesPdQ3gEUw/viewform",
+      applicationLink: null,
       requirements: [
         "Reports to VP Academics",
         "Works with Marketing Team, Director of Events",
@@ -89,8 +87,7 @@ export default function GetInvolved() {
       description:
         "The backbone of MES programming, responsible for helping ideate, plan, and execute events both large and small. This role requires initiative, ownership, and proactive follow-through. Not 'helpers', but 'co-organizers'",
       icon: "📅",
-      applicationLink:
-        "https://docs.google.com/forms/d/e/1FAIpQLSeGMC6XP3EL63tcVSSvSCWuF__BfTcdtbO7atoaesPdQ3gEUw/viewform",
+      applicationLink: null,
       requirements: [
         "Reports to Director of Events",
         "Works with VP Operations, Finance Team, Marketing Team",
@@ -118,8 +115,7 @@ export default function GetInvolved() {
       description:
         "The 'hands-on financial stewards' of MES, working closely with Director of Finance to manage records, assist with event budgeting, and track sponsorship-related deliverables. Ensure every dollar is accounted for and well-spent",
       icon: "💰",
-      applicationLink:
-        "https://docs.google.com/forms/d/e/1FAIpQLSeGMC6XP3EL63tcVSSvSCWuF__BfTcdtbO7atoaesPdQ3gEUw/viewform",
+      applicationLink: null,
       requirements: [
         "Reports to Director of Finance",
         "Works with VP Operations, Events Team, Sponsorship Outreach",
@@ -145,8 +141,7 @@ export default function GetInvolved() {
       description:
         "The 'creative engines' behind MES's public presence. Design posts, write captions, help manage social media platforms, and shape how we connect with students. Ideal for someone who wants to build a portfolio in communications, design, or digital media",
       icon: "📢",
-      applicationLink:
-        "https://docs.google.com/forms/d/e/1FAIpQLSeGMC6XP3EL63tcVSSvSCWuF__BfTcdtbO7atoaesPdQ3gEUw/viewform",
+      applicationLink: null,
       requirements: [
         "Reports to Director of Marketing",
         "Works with Media Design Coordinators, VP Communications",
@@ -198,9 +193,7 @@ export default function GetInvolved() {
   return (
     <>
       <Head>
-        <title>
-          Get Involved | McMaster Economics Society - We are Hiring!
-        </title>
+        <title>Get Involved | McMaster Economics Society</title>
         <meta
           name="description"
           content="Join the McMaster Economics Society and become part of a vibrant community dedicated to economic education and professional development."
@@ -224,11 +217,11 @@ export default function GetInvolved() {
         {/* Alert Banner */}
         <div className={styles.alertBanner}>
           <div className={styles.alertContent}>
-            <div className={styles.alertIcon}>❗❗❗</div>
+            <div className={styles.alertIcon}>⚠️</div>
             <div className={styles.alertText}>
               <p>
-                We are hiring right now! DEADLINE TO APPLY: Friday, August 29 at
-                11:59 p.m.
+                We are not hiring at the moment, but please stay informed by
+                following our social media:
               </p>
             </div>
             <div className={styles.socialLinks}>

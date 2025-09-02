@@ -5,12 +5,13 @@ import Link from "next/link";
 import styles from "./AboutMesPage.module.css";
 import { AnimatedCounter } from "../../components/AnimatedCounter";
 
-const MissionItem = ({ icon, title, description }) => (
+const MissionItem = ({ icon, title, link, description }) => (
   <div className={styles.missionItem}>
     <div className={styles.missionIcon}>
       <Image
         src={icon}
         alt={title}
+        href={link}
         width={200}
         height={165.5}
         style={{ objectFit: "cover" }}
@@ -50,21 +51,40 @@ const ImpactStat = ({ number, label, suffix = "", duration = 2000 }) => (
   </div>
 );
 
-const ForwardItem = ({ icon, title, description }) => (
-  <div className={styles.forwardItem}>
-    <div className={styles.forwardIcon}>
-      <Image
-        src={icon}
-        alt={title}
-        width={80}
-        height={80}
-        style={{ objectFit: "cover" }}
-      />
-    </div>
-    <h3 className={styles.forwardTitle}>{title}</h3>
-    <p className={styles.forwardDescription}>{description}</p>
-  </div>
-);
+const ForwardItem = ({ icon, title, description, link }) => {
+  const content = (
+    <>
+      <div className={styles.forwardIcon}>
+        <Image
+          src={icon}
+          alt={title}
+          width={80}
+          height={80}
+          style={{ objectFit: "cover" }}
+        />
+      </div>
+      <h3 className={styles.forwardTitle}>{title}</h3>
+      <p className={styles.forwardDescription}>{description}</p>
+    </>
+  );
+
+  // If a link is provided, wrap the content in a Link component
+  if (link) {
+    return (
+      <Link
+        href={link}
+        className={styles.forwardItem}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {content}
+      </Link>
+    );
+  }
+
+  // Otherwise, render as a regular div
+  return <div className={styles.forwardItem}>{content}</div>;
+};
 
 export default function AboutMesPage() {
   const missionItems = [
@@ -121,9 +141,10 @@ export default function AboutMesPage() {
   const forwardItems = [
     {
       icon: "/magazine-icon.png", // You'll need to add these icons
-      title: "Economics Magazine",
+      title: "The Rational Choice",
       description:
         "McMaster's first student-led economics publication featuring articles, commentary, and creative content",
+      link: "https://docs.google.com/forms/d/e/1FAIpQLSf3hysUSUIak0yNoKVK8b8GIHuZ5yBq_VImUu6gXnPEKjrpEA/viewform",
     },
     {
       icon: "/trophy-icon.png",

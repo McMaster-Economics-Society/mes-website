@@ -32,8 +32,8 @@
 }
 
 .alertBanner {
-    background: #f0fdf4; /*fefbf3*/
-    border-left: 4px solid #22c55e; /*Orange colour for not hiring: #f59e0b*/
+    background: #fefbf3; /*fefbf3, f0fdf4*/
+    border-left: 4px solid #f59e0b; /*Orange colour for not hiring: #f59e0b, Green for hiring: #22c55e*/
     max-width: 1200px;
     margin: 1.5rem auto;
     padding: 1rem;
@@ -56,7 +56,7 @@
 }
 
 .alertText p {
-    color: #166534; /*#92400e*/
+    color: #92400e; /*#92400e, Green: 155534*/
     font-weight: 600;
     margin: 0;
 }
@@ -67,12 +67,12 @@
 }
 
 .socialLink {
-    color: #16a34a; /* #d97706*/
+    color: #d97706; /* #d97706, green: 16a34a*/
     transition: color 0.2s;
 }
 
 .socialLink:hover {
-    color: #166534; /*#92400e*/
+    color: #92400e; /*#92400e, Green: 155534*/
 }
 
 /* Team Photo Section */
