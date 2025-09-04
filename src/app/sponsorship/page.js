@@ -49,14 +49,14 @@ export default function SponsorshipPage() {
         <div className={styles.pdfContainer}>
           {!pdfError ? (
             <object
-              data="/MES Sponsorship Package.pdf#view=FitH&toolbar=1&navpanes=0&scrollbar=1&zoom=page-width"
+              data="/MES Sponsorship Package 2025_26.pdf#view=FitH&toolbar=1&navpanes=0&scrollbar=1&zoom=page-width"
               type="application/pdf"
               className={styles.pdfObject}
               onError={handlePdfError}
             >
               {/* Fallback iframe for browsers that don't support object */}
               <iframe
-                src="/MES Sponsorship Package.pdf#view=FitH&toolbar=1&navpanes=0&scrollbar=1&zoom=page-width"
+                src="/MES Sponsorship Package 2025_26.pdf#view=FitH&toolbar=1&navpanes=0&scrollbar=1&zoom=page-width"
                 className={styles.responsiveIframe}
                 title="MES Sponsorship Package"
                 onError={handlePdfError}
@@ -65,7 +65,7 @@ export default function SponsorshipPage() {
           ) : (
             /* Try iframe as final fallback */
             <iframe
-              src="/MES Sponsorship Package.pdf#view=FitH&toolbar=1&navpanes=0&scrollbar=1"
+              src="/MES Sponsorship Package 2025_26.pdf#view=FitH&toolbar=1&navpanes=0&scrollbar=1"
               className={styles.responsiveIframe}
               title="MES Sponsorship Package"
               sandbox="allow-same-origin allow-scripts allow-popups allow-forms"

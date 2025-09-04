@@ -33,7 +33,7 @@
 
 .alertBanner {
     background: #fefbf3; /*fefbf3, f0fdf4*/
-    border-left: 4px solid #f59e0b; /*Orange colour for not hiring: #f59e0b, Green for hiring: #22c55e*/
+    border-left: 4px solid #22c55e; /*Orange colour for not hiring: #f59e0b, Green for hiring: #22c55e*/
     max-width: 1200px;
     margin: 1.5rem auto;
     padding: 1rem;
@@ -56,7 +56,7 @@
 }
 
 .alertText p {
-    color: #92400e; /*#92400e, Green: 155534*/
+    color: #155534; /*#92400e, Green: 155534*/
     font-weight: 600;
     margin: 0;
 }
@@ -67,12 +67,12 @@
 }
 
 .socialLink {
-    color: #d97706; /* #d97706, green: 16a34a*/
+    color: #16a34a; /* #d97706, green: 16a34a*/
     transition: color 0.2s;
 }
 
 .socialLink:hover {
-    color: #92400e; /*#92400e, Green: 155534*/
+    color: #155534; /*#92400e, Green: 155534*/
 }
 
 /* Team Photo Section */
@@ -170,6 +170,73 @@
 .magazineCommittee {
     background: #f0f9ff;
     border-color: #e0e7ff;
+}
+
+/* Case Study Competition Team Styles */
+.caseStudyFullWidth {
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.caseStudyCompetition {
+    background: #89303d;
+    border-color: #89303d;
+}
+
+.noteSection {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.availablePositionsHeader {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 2rem 0 1.5rem 0;
+    text-align: center;
+}
+
+.positionsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.position {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.positionTitle {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.sectionSubtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 0.5rem 0;
+}
+
+/* Override sectionTitle font size within positions to match sectionSubtitle */
+.position .sectionTitle {
+    font-size: 1rem;
+}
+
+.positionDescription {
+    font-size: 0.875rem;
+    color: #ffffff;
+    line-height: 1.4;
+    margin: 0 0 1rem 0;
+    opacity: 0.9;
 }
 
 .cardHeader {
@@ -443,5 +510,19 @@
         width: 100%;
         max-width: 300px;
         justify-content: center;
+    }
+
+    /* Case Study Section Responsive */
+    .positionsContainer {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .position {
+        padding: 1rem;
+    }
+
+    .availablePositionsHeader {
+        font-size: 1.25rem;
     }
 }
