@@ -6,6 +6,18 @@ import styles from "./GetInvolved.module.css";
 export default function GetInvolved() {
   const opportunities = [
     {
+      id: "mentor-program",
+      title: "Mentorship Program 2025-2206",
+      description:
+        "Designed to connect upper-year Economics students (mentors) with first-year and second-year students (mentees) to foster guidance, academic support, and community within our department.",
+      icon: "🤝",
+      applicationLink:
+        "https://docs.google.com/forms/d/1qa8C8fwnL5KeRJYGaN4W4VvB4ZxfwxPU6TYSOHl4hV0/viewform?edit_requested=true",
+      requirements: null,
+      responsibilities: null,
+      idealTraits: null,
+    },
+    {
       id: "general-members",
       title: "General Members",
       description:
@@ -293,33 +305,37 @@ export default function GetInvolved() {
                 </div>
 
                 <div className={styles.cardContent}>
-                  <div className={styles.section}>
-                    <h4 className={styles.sectionTitle}>
-                      <span className={styles.bullet}></span>
-                      Requirements
-                    </h4>
-                    <ul className={styles.sectionList}>
-                      {opportunity.requirements.map((req, idx) => (
-                        <li key={idx} className={styles.listItem}>
-                          {req}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  {opportunity.requirements && (
+                    <div className={styles.section}>
+                      <h4 className={styles.sectionTitle}>
+                        <span className={styles.bullet}></span>
+                        Requirements
+                      </h4>
+                      <ul className={styles.sectionList}>
+                        {opportunity.requirements.map((req, idx) => (
+                          <li key={idx} className={styles.listItem}>
+                            {req}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
 
-                  <div className={styles.section}>
-                    <h4 className={styles.sectionTitle}>
-                      <span className={styles.bullet}></span>
-                      Key Responsibilities
-                    </h4>
-                    <ul className={styles.sectionList}>
-                      {opportunity.responsibilities.map((resp, idx) => (
-                        <li key={idx} className={styles.listItem}>
-                          {resp}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  {opportunity.responsibilities && (
+                    <div className={styles.section}>
+                      <h4 className={styles.sectionTitle}>
+                        <span className={styles.bullet}></span>
+                        Key Responsibilities
+                      </h4>
+                      <ul className={styles.sectionList}>
+                        {opportunity.responsibilities.map((resp, idx) => (
+                          <li key={idx} className={styles.listItem}>
+                            {resp}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
 
                   {opportunity.benefits && (
                     <div className={styles.section}>
@@ -337,19 +353,21 @@ export default function GetInvolved() {
                     </div>
                   )}
 
-                  <div className={styles.section}>
-                    <h4 className={styles.sectionTitle}>
-                      <span className={styles.bullet}></span>
-                      Ideal Traits
-                    </h4>
-                    <ul className={styles.sectionList}>
-                      {opportunity.idealTraits.map((trait, idx) => (
-                        <li key={idx} className={styles.listItem}>
-                          {trait}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  {opportunity.idealTraits && (
+                    <div className={styles.section}>
+                      <h4 className={styles.sectionTitle}>
+                        <span className={styles.bullet}></span>
+                        Ideal Traits
+                      </h4>
+                      <ul className={styles.sectionList}>
+                        {opportunity.idealTraits.map((trait, idx) => (
+                          <li key={idx} className={styles.listItem}>
+                            {trait}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
 
                 <div className={styles.cardFooter}>
