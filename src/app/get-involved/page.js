@@ -23,7 +23,8 @@ export default function GetInvolved() {
       description:
         "Want to engage with MES without taking on an executive role",
       icon: "👥",
-      applicationLink: null,
+      applicationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSe0Gz5y7bfRyFfu3jdyXU9PexYGwqqMegMAi3Bl4HDrrThEQw/viewform?usp=dialog",
       requirements: [
         "Signup via Google form at Club Fest at linktree",
         "Attend 1+ event/month or volunteer twice per term",
