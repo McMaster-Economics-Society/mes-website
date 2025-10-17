@@ -4,7 +4,7 @@ export const allEvents = [
     title: "Bank of Canada Financial Markets Information Session",
     description:
       "Come learn about the Bank of Canada's financial markets and how they impact the economy.",
-    location: "ETB (Engineering Technology Building) Room 237",
+    location: "TBD",
     date: "October 20, 2025",
     time: "6:30 PM - 7:30 PM",
     image: "/event-images/boc_info_session_event.jpg",
