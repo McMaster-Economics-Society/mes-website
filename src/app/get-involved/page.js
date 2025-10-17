@@ -7,7 +7,7 @@ export default function GetInvolved() {
   const opportunities = [
     {
       id: "mentor-program",
-      title: "Mentorship Program 2025-2206",
+      title: "Mentorship Program 2025-2026",
       description:
         "Designed to connect upper-year Economics students (mentors) with first-year and second-year students (mentees) to foster guidance, academic support, and community within our department.",
       icon: "🤝",

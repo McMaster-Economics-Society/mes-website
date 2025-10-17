@@ -1,14 +1,25 @@
 export const allEvents = [
   {
     id: 1,
-    title: "Club Fest",
+    title: "Bank of Canada Financial Markets Information Session",
     description:
-      "Come join us at Club Fest in person to find out more about our club and its activities!",
-    location: "Mills Plaza and BSB Field",
-    date: "September 17-18, 2025",
-    time: "10:00AM - 3:00PM",
-    image: "/event-images/club_fest_event.jpeg",
-    imageAlt: "BSB field in McMaster University",
+      "Come learn about the Bank of Canada's financial markets and how they impact the economy.",
+    location: "ETB (Engineering Technology Building) Room 237",
+    date: "October 20, 2025",
+    time: "6:30 PM - 7:30 PM",
+    image: "/event-images/boc_info_session_event.jpg",
+    imageAlt: "Tall buildings with a canada flag waving in the wind",
+  },
+  {
+    id: 2,
+    title: "MES Bonfire Night",
+    description:
+      "Come join us at the Altitude Bonfire Pit for a night of fun and fellowship!",
+    location: "ALTITUDE Bonfire Pit",
+    date: "November 4, 2025",
+    time: "6:30PM - 8:30PM",
+    image: "/event-images/bonfire_event.jpg",
+    imageAlt: "Bonfire with black background",
   },
   // {
   //   id: 2,
