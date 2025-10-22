@@ -1,17 +1,6 @@
 export const allEvents = [
   {
     id: 1,
-    title: "Bank of Canada Financial Markets Information Session",
-    description:
-      "Come learn about the Bank of Canada's financial markets and how they impact the economy.",
-    location: "KTH 109",
-    date: "October 20, 2025",
-    time: "6:30 PM - 7:30 PM",
-    image: "/event-images/boc_info_session_event.jpg",
-    imageAlt: "Tall buildings with a canada flag waving in the wind",
-  },
-  {
-    id: 2,
     title: "MES Bonfire Night",
     description:
       "Come join us at the Altitude Bonfire Pit for a night of fun and fellowship!",
