@@ -216,6 +216,34 @@ export default function Footer() {
                   />
                 </div>
               </a>
+              <a
+                href="https://economics.mcmaster.ca/"
+                className={styles.socialLink}
+                aria-label="McMaster Economics Social Sciences - Department of Economics"
+              >
+                <div className={styles.socialIcon}>
+                  <Image
+                    src="/dept-icon.png"
+                    width={30}
+                    height={30}
+                    alt="Globe Icon image that represents McMaster Economics Social Sciences"
+                  />
+                </div>
+              </a>
+              <a
+                href="https://www.bouncelife.com/organizations/68941c23ea2af129e14211fa"
+                className={styles.socialLink}
+                aria-label="Bounce Life"
+              >
+                <div className={styles.socialIcon}>
+                  <Image
+                    src="/bounce-life-icon.png"
+                    width={45}
+                    height={45}
+                    alt="Bounce Life"
+                  />
+                </div>
+              </a>
             </div>
           </div>
         </div>
