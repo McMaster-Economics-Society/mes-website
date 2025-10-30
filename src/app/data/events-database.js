@@ -1,6 +1,17 @@
 export const allEvents = [
   {
     id: 1,
+    title: "Study Clinic",
+    description:
+      "ALL FIRST YEAR STUDENTS ARE WELCOME TO ATTEND! Get help with your studies, ask questions, and learn from experienced First-year TAs.",
+    location: "B1008",
+    date: "October 30, 2025",
+    time: "5:30PM - 7:00PM",
+    image: "/event-images/study_hall_event.png",
+    imageAlt: "Study hall with people studying",
+  },
+  {
+    id: 2,
     title: "MES Bonfire Night",
     description:
       "Come join us at the Altitude Bonfire Pit for a night of fun and fellowship!",
