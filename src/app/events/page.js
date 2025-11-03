@@ -31,6 +31,12 @@ const EventsPage = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
+              <Image
+                src="/bounce-white.svg"
+                alt="Bounce logo"
+                width={20}
+                height={20}
+              />
               RSVP
             </a>
           )}

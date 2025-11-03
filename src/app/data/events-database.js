@@ -1,17 +1,6 @@
 export const allEvents = [
   {
     id: 1,
-    title: "Study Clinic",
-    description:
-      "ALL FIRST YEAR STUDENTS ARE WELCOME TO ATTEND! Get help with your studies, ask questions, and learn from experienced First-year TAs.",
-    location: "B1008",
-    date: "October 30, 2025",
-    time: "5:30PM - 7:00PM",
-    image: "/event-images/study_hall_event.png",
-    imageAlt: "Study hall with people studying",
-  },
-  {
-    id: 2,
     title: "MES Bonfire Night",
     description:
       "Come join us at the Altitude Bonfire Pit for a night of fun and fellowship!",
@@ -20,6 +9,8 @@ export const allEvents = [
     time: "6:30PM - 8:30PM",
     image: "/event-images/bonfire_event.jpg",
     imageAlt: "Bonfire with black background",
+    rsvpUrl:
+      "https://www.bouncelife.com/organizations/68941c23ea2af129e14211fa",
   },
   // {
   //   id: 2,

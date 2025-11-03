@@ -91,7 +91,7 @@
 }
 
 .rsvpButton {
-    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+    background: #537afa;
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -101,16 +101,18 @@
     cursor: pointer;
     transition: all 0.3s ease;
     white-space: nowrap;
-    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+    box-shadow: 0 4px 12px rgba(83, 122, 250, 0.3);
     text-decoration: none;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     text-align: center;
 }
 
 .rsvpButton:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(74, 144, 226, 0.4);
-    background: linear-gradient(135deg, #357abd 0%, #2968a3 100%);
+    box-shadow: 0 6px 16px rgba(83, 122, 250, 0.4);
+    background: #3d62e8;
     text-decoration: none;
 }
 

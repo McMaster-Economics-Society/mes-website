@@ -46,7 +46,13 @@ const LatestEvent = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  RSVP
+                  BOUNCE RSVP
+                  <Image
+                    src="/bounce-white.svg"
+                    alt="Bounce Life logo"
+                    width={20}
+                    height={20}
+                  />
                 </a>
               )}
             </div>
