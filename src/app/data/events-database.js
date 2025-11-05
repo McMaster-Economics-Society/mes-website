@@ -1,17 +1,31 @@
 export const allEvents = [
   {
     id: 1,
-    title: "MES Bonfire Night",
+    title: "Econ Unplugged",
     description:
-      "Come join us at the Altitude Bonfire Pit for a night of fun and fellowship!",
-    location: "ALTITUDE Bonfire Pit",
-    date: "November 4, 2025",
-    time: "6:30PM - 8:30PM",
-    image: "/event-images/bonfire_event.jpg",
-    imageAlt: "Bonfire with black background",
-    rsvpUrl:
-      "https://www.bouncelife.com/organizations/68941c23ea2af129e14211fa",
+      "Hosted by the McMaster Economics Research and Policy Forum, join us for a student led roundtable discussion.",
+    location: "LRW 1003",
+    date: "November 20, 2025",
+    time: "2:30PM",
+    image: "/discussion-icon.jpg",
+    // image: "/event-images/econ_unplugged.jpg",
+    imageAlt: "Econ Unplugged event",
+    // rsvpUrl:
+    //   "https://www.bouncelife.com/organizations/68941c23ea2af129e14211fa",
   },
+  // {
+  //   id: 2,
+  //   title: "MES Bonfire Night",
+  //   description:
+  //     "Come join us at the Altitude Bonfire Pit for a night of fun and fellowship!",
+  //   location: "ALTITUDE Bonfire Pit",
+  //   date: "November 4, 2025",
+  //   time: "6:30PM - 8:30PM",
+  //   image: "/event-images/bonfire_event.jpg",
+  //   imageAlt: "Bonfire with black background",
+  //   rsvpUrl:
+  //     "https://www.bouncelife.com/organizations/68941c23ea2af129e14211fa",
+  // },
   // {
   //   id: 2,
   //   title: "Guest Speaker Series",
