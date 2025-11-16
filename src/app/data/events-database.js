@@ -7,11 +7,9 @@ export const allEvents = [
     location: "LRW 1003",
     date: "November 20, 2025",
     time: "2:30PM",
-    image: "/discussion-icon.jpg",
-    // image: "/event-images/econ_unplugged.jpg",
+    image: "/event-images/econ_unplugged_event.jpg",
     imageAlt: "Econ Unplugged event",
-    // rsvpUrl:
-    //   "https://www.bouncelife.com/organizations/68941c23ea2af129e14211fa",
+    rsvpUrl: "https://www.bouncelife.com/events/6913b6062f4c85dd4e4e722a",
   },
   // {
   //   id: 2,
