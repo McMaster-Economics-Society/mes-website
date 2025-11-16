@@ -7,7 +7,7 @@ export const allEvents = [
     location: "LRW 1003",
     date: "November 20, 2025",
     time: "2:30PM",
-    image: "/event-images/econ_unplugged_event.jpg",
+    image: "/event-images/econ_unplugged_event.jpeg",
     imageAlt: "Econ Unplugged event",
     rsvpUrl: "https://www.bouncelife.com/events/6913b6062f4c85dd4e4e722a",
   },
