@@ -11,6 +11,18 @@ export const allEvents = [
     imageAlt: "Econ Unplugged event",
     rsvpUrl: "https://www.bouncelife.com/events/6913b6062f4c85dd4e4e722a",
   },
+  {
+    id: 2,
+    title: "Escape Inflation (Escape Room)",
+    description:
+      "Escape Inflation is an escape room experience that will test your problem-solving skills and teamwork.",
+    location: "TBD",
+    date: "November 25, 2025",
+    time: "6:30PM - 8:30PM",
+    image: "/event-images/escape_room_event.jpeg",
+    imageAlt: "Escape Room with black background",
+    rsvpUrl: "https://www.bouncelife.com/events/6913b6062f4c85dd4e4e722a",
+  },
   // {
   //   id: 2,
   //   title: "MES Bonfire Night",
