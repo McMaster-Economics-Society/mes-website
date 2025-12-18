@@ -1,27 +1,27 @@
 export const allEvents = [
-  {
-    id: 1,
-    title: "Econ Unplugged",
-    description:
-      "Hosted by the McMaster Economics Research and Policy Forum, join us for a student led roundtable discussion.",
-    location: "LRW 1003",
-    date: "November 20, 2025",
-    time: "2:30PM",
-    image: "/event-images/econ_unplugged_event.jpeg",
-    imageAlt: "Econ Unplugged event",
-    rsvpUrl: "https://www.bouncelife.com/events/6913b6062f4c85dd4e4e722a",
-  },
-  {
-    id: 2,
-    title: "Escape Inflation (Escape Room)",
-    description:
-      "Escape Inflation is an escape room experience that will test your problem-solving skills and teamwork.",
-    location: "TBD",
-    date: "November 25, 2025",
-    time: "6:30PM - 8:30PM",
-    image: "/event-images/escape_room_event.jpeg",
-    imageAlt: "Escape Room with black background",
-  },
+  // {
+  //   id: 1,
+  //   title: "Econ Unplugged",
+  //   description:
+  //     "Hosted by the McMaster Economics Research and Policy Forum, join us for a student led roundtable discussion.",
+  //   location: "LRW 1003",
+  //   date: "November 20, 2025",
+  //   time: "2:30PM",
+  //   image: "/event-images/econ_unplugged_event.jpeg",
+  //   imageAlt: "Econ Unplugged event",
+  //   rsvpUrl: "https://www.bouncelife.com/events/6913b6062f4c85dd4e4e722a",
+  // },
+  // {
+  //   id: 2,
+  //   title: "Escape Inflation (Escape Room)",
+  //   description:
+  //     "Escape Inflation is an escape room experience that will test your problem-solving skills and teamwork.",
+  //   location: "TBD",
+  //   date: "November 25, 2025",
+  //   time: "6:30PM - 8:30PM",
+  //   image: "/event-images/escape_room_event.jpeg",
+  //   imageAlt: "Escape Room with black background",
+  // },
   // {
   //   id: 2,
   //   title: "MES Bonfire Night",
@@ -47,7 +47,6 @@ export const allEvents = [
   //   imageAlt: "Guest speaker presenting to students",
   //   rsvpUrl:
   //"https://linktr.ee/McMasterEconSociety?fbclid=PAZXh0bgNhZW0CMTEAAac1uJC31qw4sH7oaOhm87CWnDARUvgzmTtaEV6Q60gv_u41ft_mwtlGJlGp4w_aem_1VufqlZfWrpdcZ4fAiOTgw", // Add your actual RSVP link
-
   // },
   // {
   //   id: 3,
