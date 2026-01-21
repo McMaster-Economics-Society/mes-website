@@ -61,26 +61,20 @@ export default function TeamPage() {
     },
   ];
 
-  // const academicTeam = [
-  //   {
-  //     name: "Aliza Raza",
-  //     position: "Academic Executive",
-  //     background: "Honours Economics, Minor in Business",
-  //     avatar: "/AlizaR.jpg",
-  //   },
-  //   {
-  //     name: "Afrah Khan",
-  //     position: "First-Year Representative",
-  //     background: "Economics I",
-  //     avatar: "/AfrahK.jpg",
-  //   },
-  //   {
-  //     name: "Kunal Rai",
-  //     position: "First-Year Representative",
-  //     background: "Economics I",
-  //     avatar: "/KunalR.jpg",
-  //   },
-  // ];
+  const academicTeam = [
+    {
+      name: "Nathan Lahey",
+      position: "Academic Executive",
+      background: "Honours Economics",
+      avatar: "/team-avatars/NathanL.jpg",
+    },
+    {
+      name: "Seoa Mo",
+      position: "Academic Executive",
+      background: "Honours Political Science, Minor in Economics",
+      avatar: "/MES_black.png",
+    },
+  ];
 
   const marketingTeam = [
     {
@@ -88,7 +82,7 @@ export default function TeamPage() {
       position: "Director of Marketing",
       background:
         "Honours Economics Co-op, Minor in Finance & Political Science",
-      avatar: "/team-avatars/EthanE.jpeg",
+      avatar: "/team-avatars/EthanE.png",
     },
     {
       name: "Marissa Manikavasagar",
@@ -104,9 +98,27 @@ export default function TeamPage() {
     },
     {
       name: "Kunal Rai",
-      position: "First-Year Representative",
-      background: "Economics I",
-      avatar: "/team-avatars/KunalR.jpg",
+      position: "Marketing Executive",
+      background: "Honours Economics Co-op",
+      avatar: "/MES_black.png",
+    },
+    {
+      name: "Krystal Bui",
+      position: "Marketing Executive",
+      background: "Honours Economics Co-op, Minor in Law",
+      avatar: "/team-avatars/KrystalB.jpg",
+    },
+    {
+      name: "Mohammad Shafi Asif",
+      position: "Marketing Executive",
+      background: "Honours Commerce",
+      avatar: "/MES_black.png",
+    },
+    {
+      name: "Beny Fernando",
+      position: "Marketing Executive",
+      background: "Honours Commerce",
+      avatar: "/team-avatars/BenyF.png",
     },
   ];
 
@@ -122,6 +134,24 @@ export default function TeamPage() {
       position: "Events Executive",
       background: "Combined Honours Economics & Kinesiology",
       avatar: "/team-avatars/FolaO.jpg",
+    },
+    {
+      name: "Laiba Imtiaz",
+      position: "Events Executive",
+      background: "Honours Economics",
+      avatar: "/MES_black.png",
+    },
+    {
+      name: "Mayra Gupta",
+      position: "Events Executive",
+      background: "Honours Commerce",
+      avatar: "/team-avatars/MayraG.jpg",
+    },
+    {
+      name: "Lavinia Banica",
+      position: "Events Executive",
+      background: "Honours Commerce, Minor in Economics",
+      avatar: "/MES_black.png",
     },
   ];
   const outreachTeam = [
@@ -140,6 +170,18 @@ export default function TeamPage() {
       background: "BA Economics II",
       avatar: "/team-avatars/EdenA.jpg",
     },
+    {
+      name: "Chizam Nkechika",
+      position: "Finance Executive",
+      background: "Honours Economics Specialist",
+      avatar: "/team-avatars/ChizamN.jpg",
+    },
+    {
+      name: "Myles Whale",
+      position: "Finance Executive",
+      background: "Honours Commerce with Internship",
+      avatar: "/team-avatars/MylesW.jpg",
+    },
   ];
 
   const otherTeam = [
@@ -149,6 +191,18 @@ export default function TeamPage() {
       background: "Honors Economics Co-op",
       avatar: "/team-avatars/AfrahK.jpg",
     },
+    {
+      name: "Siham Hussein",
+      position: "First Year Representative",
+      background: "Honours Commerce",
+      avatar: "/MES_black.png",
+    },
+    {
+      name: "Adam Veall",
+      position: "First Year Representative",
+      background: "Honours Economics",
+      avatar: "/MES_black.png",
+    },
   ];
 
   const magazineTeam = [
@@ -157,7 +211,7 @@ export default function TeamPage() {
       position: "Magazine Editor-In-Chief",
       background:
         "Honours Economics & Computer Science, Minor in Religious Studies, Health & Wellbeing",
-      avatar: "/team-avatars/HridiP.jpg",
+      avatar: "/MES_black.png",
     },
   ];
 
@@ -186,11 +240,12 @@ export default function TeamPage() {
             members={executiveLeadership}
           />
           <TeamSection title="Marketing Team" members={marketingTeam} />
-          <TeamSection title="Events Team" members={eventsTeam} />
           <TeamSection title="Outreach Team" members={outreachTeam} />
+          <TeamSection title="Events Team" members={eventsTeam} />
+          <TeamSection title="Academic Team" members={academicTeam} />
           <TeamSection title="Finance Team" members={financeTeam} />
-          <TeamSection title="Coordinators" members={otherTeam} />
           <TeamSection title="Magazine Team" members={magazineTeam} />
+          <TeamSection title="Other Team" members={otherTeam} />
         </div>
       </div>
     </>

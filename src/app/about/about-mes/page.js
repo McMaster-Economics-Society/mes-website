@@ -172,7 +172,7 @@ export default function AboutMesPage() {
               {/* Group Photo - This is the critical image that should load instantly */}
               <div className={styles.groupPhotoContainer}>
                 <Image
-                  src="/mes-exec-team-2025.jpg" // Replace with your actual group photo path
+                  src="/mes-exec-team-2026.jpg" // Replace with your actual group photo path
                   alt="McMaster Economics Society Executive Team 2024-2025"
                   width={800}
                   height={500}
