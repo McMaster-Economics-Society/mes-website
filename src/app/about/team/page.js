@@ -57,7 +57,7 @@ export default function TeamPage() {
       name: "Aliza Raza",
       position: "VP of Academics",
       background: "Honours Economics, Minor in Business",
-      avatar: "/team-avatars/AlizaR.jpg",
+      avatar: "/MES_black.png",
     },
   ];
 
@@ -168,7 +168,7 @@ export default function TeamPage() {
       name: "Eden Andoni",
       position: "Director of Finance",
       background: "BA Economics II",
-      avatar: "/team-avatars/EdenA.jpg",
+      avatar: "/MES_black.png",
     },
     {
       name: "Chizam Nkechika",
@@ -189,7 +189,7 @@ export default function TeamPage() {
       name: "Afrah Khan",
       position: "Internal Coordinator",
       background: "Honors Economics Co-op",
-      avatar: "/team-avatars/AfrahK.jpg",
+      avatar: "/MES_black.png",
     },
     {
       name: "Siham Hussein",
