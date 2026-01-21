@@ -6,16 +6,24 @@ import styles from "./HeroCarousel.module.css";
 
 const HeroCarousel = () => {
   // Replace these with your actual image paths
-  const images = [
+  const imageList = [
     "/hero-carousel/MEETTHEPROFS-11.jpg",
-    "/hero-carousel/MEETTHEPROFS-23.jpg",
     "/hero-carousel/MEETTHEPROFS-29.jpg",
     "/hero-carousel/MEETTHEPROFS-37.jpg",
-    "/hero-carousel/MESxPHILSOC-3.jpg",
-    "/hero-carousel/MESxPHILSOC-4.jpg",
+    "/hero-carousel/ECONUNPLUGGED_1.png",
+    "/hero-carousel/ECONUNPLUGGED_2.png",
+    "/hero-carousel/ECONUNPLUGGED_3.png",
+    "/hero-carousel/ECONUNPLUGGED_4.png",
   ];
 
+  // Shuffle images on initial render
+  const [images, setImages] = useState(imageList);
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const shuffled = [...imageList].sort(() => Math.random() - 0.5);
+    setImages(shuffled);
+  }, []);
 
   // Auto-advance carousel every 5 seconds
   useEffect(() => {
@@ -72,8 +80,8 @@ const HeroCarousel = () => {
           <span className={styles.heroTo}>to</span>
           <span className={styles.heroMain}>McMaster Economics Society</span>
         </h1>
-        <Link href="/get-involved" className={styles.heroCta}>
-          We are hiring!
+        <Link href="/about/about-mes" className={styles.heroCta}>
+          Learn More
         </Link>
         {/* Below is for non-hiring status*/}
         {/* <Link href="/about/about-mes" className={styles.heroCta}>
