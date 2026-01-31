@@ -121,6 +121,11 @@ export default function MobileMenu({ isOpen, onToggle, onClose }) {
             </Link>
           </div>
           <div className={styles.navItem}>
+            <Link href="/magazine" className={styles.navLink} onClick={onClose}>
+              <span>Magazine</span>
+            </Link>
+          </div>
+          <div className={styles.navItem}>
             <Link
               href="/resources"
               className={styles.navLink}

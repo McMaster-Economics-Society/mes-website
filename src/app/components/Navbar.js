@@ -55,6 +55,7 @@ export default function Navbar() {
     { name: "Get Involved", href: "/get-involved" },
     { name: "Sponsorship", href: "/sponsorship" },
     { name: "Events", href: "/events" },
+    { name: "Magazine", href: "/magazine" },
     { name: "Resources", href: "/resources" },
   ];
 
