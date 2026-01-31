@@ -42,17 +42,19 @@ const LatestEvent = () => {
               {latestEvent.rsvpUrl && (
                 <a
                   href={latestEvent.rsvpUrl}
-                  className={styles.rsvpButton}
+                  className={latestEvent.rsvpType === "bounce" ? styles.rsvpButton : styles.rsvpButtonDefault}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  BOUNCE RSVP
-                  <Image
-                    src="/bounce-white.svg"
-                    alt="Bounce Life logo"
-                    width={20}
-                    height={20}
-                  />
+                  {latestEvent.rsvpType === "bounce" ? "BOUNCE RSVP" : "RSVP"}
+                  {latestEvent.rsvpType === "bounce" && (
+                    <Image
+                      src="/bounce-white.svg"
+                      alt="Bounce Life logo"
+                      width={20}
+                      height={20}
+                    />
+                  )}
                 </a>
               )}
             </div>

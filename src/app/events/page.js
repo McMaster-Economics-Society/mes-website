@@ -27,17 +27,19 @@ const EventsPage = () => {
           {event.rsvpUrl && (
             <a
               href={event.rsvpUrl}
-              className={styles.rsvpButton}
+              className={event.rsvpType === "bounce" ? styles.rsvpButton : styles.rsvpButtonDefault}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image
-                src="/bounce-white.svg"
-                alt="Bounce logo"
-                width={20}
-                height={20}
-              />
-              RSVP
+              {event.rsvpType === "bounce" && (
+                <Image
+                  src="/bounce-white.svg"
+                  alt="Bounce logo"
+                  width={20}
+                  height={20}
+                />
+              )}
+              {event.rsvpType === "bounce" ? "BOUNCE RSVP" : "RSVP"}
             </a>
           )}
         </div>

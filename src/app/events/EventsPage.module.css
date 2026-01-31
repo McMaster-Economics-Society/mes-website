@@ -140,6 +140,32 @@
     text-decoration: none;
 }
 
+.rsvpButtonDefault {
+    background: #89303d;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(137, 48, 61, 0.3);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.rsvpButtonDefault:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(137, 48, 61, 0.4);
+    background: #7a2a35;
+    text-decoration: none;
+}
+
 .eventDescription {
     color: #666666;
     line-height: 1.6;
@@ -248,7 +274,8 @@
         font-size: 1.5rem;
     }
 
-    .rsvpButton {
+    .rsvpButton,
+    .rsvpButtonDefault {
         align-self: flex-start;
         padding: 0.6rem 1.2rem;
         font-size: 0.85rem;
