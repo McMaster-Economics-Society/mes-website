@@ -7,7 +7,7 @@ export const allEvents = [
     location: "LRW 1003",
     date: "February 2, 2026",
     time: "6:00PM - 8:00PM",
-    image: "/MES_black.png",
+    image: "/event-images/launch_party_event.png",
     imageAlt: "Career fair with students and employers",
     rsvpUrl: "https://forms.gle/9V5fZqBJ3xrPxxZ68",
     rsvpType: "default", // "bounce" for Bounce Life button, "default" for standard RSVP
