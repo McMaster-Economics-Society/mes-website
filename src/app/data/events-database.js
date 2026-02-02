@@ -20,7 +20,7 @@ export const allEvents = [
     location: "Exclusive Zoom Session",
     date: "February 5, 2026",
     time: "2:00PM",
-    image: "/event-images/wso-event.jpg",
+    image: "/event-images/wso-event.png",
     imageAlt: "Q&A session with Wall Street Oasis founder",
     rsvpUrl:
       "https://docs.google.com/forms/d/e/1FAIpQLSfT9Bqi_bzficpWx31VMl5Eegru6R8B8jryjQgH-Hc-FwAQMA/viewform",

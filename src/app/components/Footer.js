@@ -98,10 +98,7 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSf3hysUSUIak0yNoKVK8b8GIHuZ5yBq_VImUu6gXnPEKjrpEA/viewform"
-                    className={styles.linkWithIcon}
-                  >
+                  <Link href="/magazine" className={styles.linkWithIcon}>
                     <span>MES Magazine</span>
                     <Image
                       width={16}
