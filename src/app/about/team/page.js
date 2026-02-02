@@ -100,7 +100,7 @@ export default function TeamPage() {
       name: "Kunal Rai",
       position: "Marketing Executive",
       background: "Honours Economics Co-op",
-      avatar: "/MES_black.png",
+      avatar: "/team-avatars/KunalR.jpg",
     },
     {
       name: "Krystal Bui",
@@ -195,7 +195,7 @@ export default function TeamPage() {
       name: "Siham Hussein",
       position: "First Year Representative",
       background: "Honours Commerce",
-      avatar: "/MES_black.png",
+      avatar: "/team-avatars/SihamH.png",
     },
     {
       name: "Adam Veall",
@@ -211,7 +211,7 @@ export default function TeamPage() {
       position: "Magazine Editor-In-Chief",
       background:
         "Honours Economics & Computer Science, Minor in Religious Studies, Health & Wellbeing",
-      avatar: "/MES_black.png",
+      avatar: "/team-avatars/HridiP.jpg",
     },
   ];
 
