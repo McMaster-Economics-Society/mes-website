@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { allEvents } from "@/app/data/events-database.js";
 import styles from "./LatestEvent.module.css";
+import ExpandableDescription from "./ExpandableDescription";
 
 const LatestEvent = () => {
   // Get only the first event (latest upcoming event)
@@ -42,11 +43,15 @@ const LatestEvent = () => {
               {latestEvent.rsvpUrl && (
                 <a
                   href={latestEvent.rsvpUrl}
-                  className={latestEvent.rsvpType === "bounce" ? styles.rsvpButton : styles.rsvpButtonDefault}
+                  className={
+                    latestEvent.rsvpType === "bounce"
+                      ? styles.rsvpButton
+                      : styles.rsvpButtonDefault
+                  }
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {latestEvent.rsvpType === "bounce" ? "BOUNCE RSVP" : "RSVP"}
+                  {latestEvent.rsvpType === "bounce" ? "BOUNCE RSVP" : "APPLY"}
                   {latestEvent.rsvpType === "bounce" && (
                     <Image
                       src="/bounce-white.svg"
@@ -61,9 +66,7 @@ const LatestEvent = () => {
 
             {/* Only render description if it exists */}
             {latestEvent.description && (
-              <p className={styles.eventDescription}>
-                {latestEvent.description}
-              </p>
+              <ExpandableDescription description={latestEvent.description} />
             )}
 
             <div className={styles.eventMeta}>

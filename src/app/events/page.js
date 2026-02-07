@@ -2,6 +2,7 @@ import Image from "next/image";
 import { allEvents } from "@/app/data/events-database.js";
 import styles from "./EventsPage.module.css";
 import Head from "next/head";
+import ExpandableDescription from "./ExpandableDescription";
 
 const EventsPage = () => {
   const EventCard = ({ event }) => (
@@ -27,7 +28,11 @@ const EventsPage = () => {
           {event.rsvpUrl && (
             <a
               href={event.rsvpUrl}
-              className={event.rsvpType === "bounce" ? styles.rsvpButton : styles.rsvpButtonDefault}
+              className={
+                event.rsvpType === "bounce"
+                  ? styles.rsvpButton
+                  : styles.rsvpButtonDefault
+              }
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -39,13 +44,13 @@ const EventsPage = () => {
                   height={20}
                 />
               )}
-              {event.rsvpType === "bounce" ? "BOUNCE RSVP" : "RSVP"}
+              {event.rsvpType === "bounce" ? "BOUNCE RSVP" : "APPLY"}
             </a>
           )}
         </div>
 
         {event.description && (
-          <p className={styles.eventDescription}>{event.description}</p>
+          <ExpandableDescription description={event.description} />
         )}
 
         <div className={styles.eventMeta}>

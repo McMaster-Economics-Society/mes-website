@@ -171,6 +171,35 @@
     line-height: 1.6;
     font-size: 1rem;
     margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.eventDescriptionExpanded {
+    color: #666666;
+    line-height: 1.6;
+    font-size: 1rem;
+    margin: 0;
+    white-space: pre-line;
+}
+
+.readMoreBtn {
+    background: none;
+    border: none;
+    color: #89303d;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 0.25rem 0;
+    margin-top: 0.5rem;
+    transition: color 0.2s ease;
+}
+
+.readMoreBtn:hover {
+    color: #7a2a35;
+    text-decoration: underline;
 }
 
 .eventMeta {
