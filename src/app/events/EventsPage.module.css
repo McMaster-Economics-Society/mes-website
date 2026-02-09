@@ -166,6 +166,19 @@
     text-decoration: none;
 }
 
+.rsvpButtonDisabled {
+    background: #b0b0b0;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    cursor: not-allowed;
+}
+
 .eventDescription {
     color: #666666;
     line-height: 1.6;
@@ -261,6 +274,31 @@
     background-color: #7a2a35;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(137, 48, 61, 0.3);
+}
+
+.noEvents {
+    text-align: center;
+    color: #888888;
+    font-size: 1.1rem;
+    padding: 2rem 0;
+}
+
+.viewPastContainer {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.viewPastLink {
+    color: #89303d;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.viewPastLink:hover {
+    color: #7a2a35;
+    text-decoration: underline;
 }
 
 /* Responsive Design */

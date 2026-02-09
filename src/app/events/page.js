@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { allEvents } from "@/app/data/events-database.js";
+import Link from "next/link";
+import { upcomingEvents } from "@/app/data/events-database.js";
 import styles from "./EventsPage.module.css";
 import Head from "next/head";
 import ExpandableDescription from "./ExpandableDescription";
@@ -24,28 +25,34 @@ const EventsPage = () => {
       <div className={styles.eventContent}>
         <div className={styles.eventHeader}>
           <h3 className={styles.eventTitle}>{event.title}</h3>
-          {/* Only show RSVP button if rsvpUrl exists */}
-          {event.rsvpUrl && (
-            <a
-              href={event.rsvpUrl}
-              className={
-                event.rsvpType === "bounce"
-                  ? styles.rsvpButton
-                  : styles.rsvpButtonDefault
-              }
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {event.rsvpType === "bounce" && (
-                <Image
-                  src="/bounce-white.svg"
-                  alt="Bounce logo"
-                  width={20}
-                  height={20}
-                />
-              )}
-              {event.rsvpType === "bounce" ? "BOUNCE RSVP" : "APPLY"}
-            </a>
+          {/* Only show RSVP button if link exists */}
+          {event.link && (
+            event.closed ? (
+              <span className={styles.rsvpButtonDisabled}>CLOSED</span>
+            ) : (
+              <a
+                href={event.link}
+                className={
+                  event.buttonType === "bounce"
+                    ? styles.rsvpButton
+                    : styles.rsvpButtonDefault
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {event.buttonType === "bounce" && "BOUNCE RSVP"}
+                {event.buttonType === "rsvp" && "RSVP"}
+                {event.buttonType === "apply" && "APPLY"}
+                {event.buttonType === "bounce" && (
+                  <Image
+                    src="/bounce-white.svg"
+                    alt="Bounce logo"
+                    width={20}
+                    height={20}
+                  />
+                )}
+              </a>
+            )
           )}
         </div>
 
@@ -155,7 +162,7 @@ const EventsPage = () => {
       </Head>
       <section className={styles.eventsSection}>
         <div className={styles.container}>
-          <h1 className={styles.pageTitle}>All Events</h1>
+          <h1 className={styles.pageTitle}>Upcoming Events</h1>
           <p className={styles.pageDescription}>
             Discover all upcoming events organized by the McMaster Economics
             Society. From study sessions to guest speakers, we have something
@@ -163,9 +170,19 @@ const EventsPage = () => {
           </p>
 
           <div className={styles.eventsGrid}>
-            {allEvents.map((event) => (
-              <EventCard key={event.id} event={event} />
-            ))}
+            {upcomingEvents.length > 0 ? (
+              upcomingEvents.map((event) => (
+                <EventCard key={event.id} event={event} />
+              ))
+            ) : (
+              <p className={styles.noEvents}>No upcoming events at the moment. Check back soon!</p>
+            )}
+          </div>
+
+          <div className={styles.viewPastContainer}>
+            <Link href="/events/archive" className={styles.viewPastLink}>
+              View Past Events →
+            </Link>
           </div>
         </div>
       </section>

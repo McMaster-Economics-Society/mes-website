@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { allEvents } from "@/app/data/events-database.js";
+import { upcomingEvents } from "@/app/data/events-database.js";
 import styles from "./LatestEvent.module.css";
 import ExpandableDescription from "./ExpandableDescription";
 
 const LatestEvent = () => {
   // Get only the first event (latest upcoming event)
-  const latestEvent = allEvents[0];
+  const latestEvent = upcomingEvents[0];
 
   // Don't render anything if no events exist
   if (!latestEvent) {
@@ -39,28 +39,34 @@ const LatestEvent = () => {
           <div className={styles.eventContent}>
             <div className={styles.eventHeader}>
               <h3 className={styles.eventTitle}>{latestEvent.title}</h3>
-              {/* Only show RSVP button if rsvpUrl exists */}
-              {latestEvent.rsvpUrl && (
-                <a
-                  href={latestEvent.rsvpUrl}
-                  className={
-                    latestEvent.rsvpType === "bounce"
-                      ? styles.rsvpButton
-                      : styles.rsvpButtonDefault
-                  }
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {latestEvent.rsvpType === "bounce" ? "BOUNCE RSVP" : "APPLY"}
-                  {latestEvent.rsvpType === "bounce" && (
-                    <Image
-                      src="/bounce-white.svg"
-                      alt="Bounce Life logo"
-                      width={20}
-                      height={20}
-                    />
-                  )}
-                </a>
+              {/* Only show RSVP button if link exists */}
+              {latestEvent.link && (
+                latestEvent.closed ? (
+                  <span className={styles.rsvpButtonDisabled}>CLOSED</span>
+                ) : (
+                  <a
+                    href={latestEvent.link}
+                    className={
+                      latestEvent.buttonType === "bounce"
+                        ? styles.rsvpButton
+                        : styles.rsvpButtonDefault
+                    }
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {latestEvent.buttonType === "bounce" && "BOUNCE RSVP"}
+                    {latestEvent.buttonType === "rsvp" && "RSVP"}
+                    {latestEvent.buttonType === "apply" && "APPLY"}
+                    {latestEvent.buttonType === "bounce" && (
+                      <Image
+                        src="/bounce-white.svg"
+                        alt="Bounce Life logo"
+                        width={20}
+                        height={20}
+                      />
+                    )}
+                  </a>
+                )
               )}
             </div>
 
