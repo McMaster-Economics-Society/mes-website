@@ -44,6 +44,20 @@ const allEvents = [
     buttonType: "apply",
     closed: false,
   },
+  {
+    id: 4,
+    title: "Behavioural Economics Game Day with Prof Tasos",
+    description: "N/A",
+    location: "TBD",
+    date: "March 24, 2026",
+    eventDate: "2026-03-24",
+    time: "6:00PM",
+    image: "/MES_black.png",
+    imageAlt: "Behavioural Economics Game Day with Prof Tasos",
+    link: "",
+    buttonType: "rsvp",
+    closed: true,
+  },
 ];
 
 // Filter events at build time based on the current date
