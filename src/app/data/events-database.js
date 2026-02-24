@@ -31,6 +31,22 @@ const allEvents = [
   },
   {
     id: 3,
+    title: "Case Competition Foundations: Final Session",
+    description:
+      "Our final session focuses on strengthening your case pitch delivery through effective presentation, communication, and slide design strategies. \nCome prepared with questions: this session includes dedicated time for Q&A.",
+    date: "February 25, 2026",
+    eventDate: "2026-02-25",
+    location:
+      "LRW 5001 + Google Meets (Meeting link provided to all general members)",
+    time: "5:30PM - 7:30PM",
+    image: "/event-images/case-comp-final-session.png",
+    imageAlt: "Case Competition Foundations: Final Session",
+    link: "",
+    buttonType: "rsvp",
+    closed: true,
+  },
+  {
+    id: 3,
     title: "Meet The Profs",
     description:
       "Our annual Meet the Profs is back! Come connect with the Economics faculty beyond your lectures. Whether you are exploring courses, careers, or just curious, this is your chance to chat, learn, and network in a relaxed setting.\n\n",
