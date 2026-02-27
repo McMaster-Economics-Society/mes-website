@@ -1,11 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { pastEvents } from "@/app/data/events-database.js";
+import { getPastEvents } from "@/app/data/events-database.js";
 import styles from "../EventsPage.module.css";
-import Head from "next/head";
 import ExpandableDescription from "../ExpandableDescription";
 
 const ArchivePage = () => {
+  const pastEvents = getPastEvents();
   const EventCard = ({ event }) => (
     <div className={styles.eventCard}>
       {event.image && (
@@ -124,13 +126,6 @@ const ArchivePage = () => {
 
   return (
     <>
-      <Head>
-        <title>Past Events | McMaster Economics Society</title>
-        <meta
-          name="description"
-          content="Browse past events organized by the McMaster Economics Society."
-        />
-      </Head>
       <section className={styles.eventsSection}>
         <div className={styles.container}>
           <h1 className={styles.pageTitle}>Past Events</h1>

@@ -1,11 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { upcomingEvents } from "@/app/data/events-database.js";
+import { getUpcomingEvents } from "@/app/data/events-database.js";
 import styles from "./EventsPage.module.css";
-import Head from "next/head";
 import ExpandableDescription from "./ExpandableDescription";
 
 const EventsPage = () => {
+  const upcomingEvents = getUpcomingEvents();
   const EventCard = ({ event }) => (
     <div className={styles.eventCard}>
       {event.image && (
@@ -153,13 +155,6 @@ const EventsPage = () => {
 
   return (
     <>
-      <Head>
-        <title>Events | McMaster Economics Society</title>
-        <meta
-          name="description"
-          content="Discover all upcoming events organized by the McMaster Economics Society!"
-        />
-      </Head>
       <section className={styles.eventsSection}>
         <div className={styles.container}>
           <h1 className={styles.pageTitle}>Upcoming Events</h1>

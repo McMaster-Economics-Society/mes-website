@@ -91,16 +91,20 @@ const allEvents = [
   },
 ];
 
-// Filter events at build time based on the current date
-const today = new Date();
-today.setHours(0, 0, 0, 0);
+export function getUpcomingEvents() {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  return allEvents.filter(
+    (event) => new Date(event.eventDate + "T23:59:59") >= today,
+  );
+}
 
-export const upcomingEvents = allEvents.filter(
-  (event) => new Date(event.eventDate + "T23:59:59") >= today,
-);
-
-export const pastEvents = allEvents.filter(
-  (event) => new Date(event.eventDate + "T23:59:59") < today,
-);
+export function getPastEvents() {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  return allEvents.filter(
+    (event) => new Date(event.eventDate + "T23:59:59") < today,
+  );
+}
 
 export { allEvents };

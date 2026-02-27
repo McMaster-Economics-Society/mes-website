@@ -1,12 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { upcomingEvents } from "@/app/data/events-database.js";
+import { getUpcomingEvents } from "@/app/data/events-database.js";
 import styles from "./LatestEvent.module.css";
 import ExpandableDescription from "./ExpandableDescription";
 
 const LatestEvent = () => {
-  // Get only the first event (latest upcoming event)
-  const latestEvent = upcomingEvents[0];
+  // Filter events client-side so the date check runs at page load, not build time
+  const latestEvent = getUpcomingEvents()[0];
 
   // Don't render anything if no events exist
   if (!latestEvent) {
