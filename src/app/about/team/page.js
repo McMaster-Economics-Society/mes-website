@@ -139,7 +139,7 @@ export default function TeamPage() {
       name: "Laiba Imtiaz",
       position: "Events Executive",
       background: "Honours Economics",
-      avatar: "/MES_black.png",
+      avatar: "/team-avatars/LaibaI.png",
     },
     {
       name: "Mayra Gupta",
@@ -151,7 +151,7 @@ export default function TeamPage() {
       name: "Lavinia Banica",
       position: "Events Executive",
       background: "Honours Commerce, Minor in Economics",
-      avatar: "/MES_black.png",
+      avatar: "/team-avatars/LaviniaB.jpg",
     },
   ];
   const outreachTeam = [
