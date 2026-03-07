@@ -201,7 +201,7 @@ export default function TeamPage() {
       name: "Adam Veall",
       position: "First Year Representative",
       background: "Honours Economics",
-      avatar: "/MES_black.png",
+      avatar: "/team-avatars/AdamV.png",
     },
   ];
 
