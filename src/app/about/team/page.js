@@ -72,7 +72,7 @@ export default function TeamPage() {
       name: "Seoa Mo",
       position: "Academic Executive",
       background: "Honours Political Science, Minor in Economics",
-      avatar: "/MES_black.png",
+      avatar: "/team-avatars/SeoaM.jpg",
     },
   ];
 
@@ -112,7 +112,7 @@ export default function TeamPage() {
       name: "Mohammad Shafi Asif",
       position: "Marketing Executive",
       background: "Honours Commerce",
-      avatar: "/MES_black.png",
+      avatar: "/team-avatars/ShafiA.jpg",
     },
     {
       name: "Beny Fernando",
@@ -189,7 +189,7 @@ export default function TeamPage() {
       name: "Afrah Khan",
       position: "Internal Coordinator",
       background: "Honors Economics Co-op",
-      avatar: "/MES_black.png",
+      avatar: "/team-avatars/AfrahK.jpg",
     },
     {
       name: "Siham Hussein",
