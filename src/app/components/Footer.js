@@ -29,8 +29,8 @@ export default function Footer() {
                   height={20}
                   className={styles.contactIcon}
                 />
-                <a className={styles.email} href="mailto:econ@themsss.com">
-                  econ@themsss.com
+                <a className={styles.email} href="mailto:econsoc@mcmaster.ca">
+                  econsoc@mcmaster.ca
                 </a>
               </div>
               <div className={styles.contactItem}>
