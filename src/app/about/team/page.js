@@ -49,7 +49,7 @@ export default function TeamPage() {
     },
     {
       name: "Izehinosen Iyamabo",
-      position: "VP of Operations",
+      position: "Co-president",
       background: "Honours Economics Co-op",
       avatar: "/team-avatars/IzzyI.jpg",
     },
