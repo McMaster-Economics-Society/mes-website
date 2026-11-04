@@ -3,6 +3,9 @@ import styles from "./page.module.css";
 import GotQuestions from "@/app/components/GotQuestions";
 import HeroCarousel from "@/app/components/HeroCarousel";
 import LatestEvent from "@/app/components/LatestEvent"; // Import the LatestEvent component
+import OurMission from "@/app/components/OurMission";
+import OurImpact from "@/app/components/OurImpact";
+import sectionStyles from "@/app/components/HomeSections.module.css";
 
 export default function Home() {
   return (
@@ -19,6 +22,13 @@ export default function Home() {
       <div className={styles.homePage}>
         {/* Hero Section - Now with Carousel */}
         <HeroCarousel />
+        {/* Our Mission + Our Impact (moved from the About MES page) */}
+        <div className={sectionStyles.wrapper}>
+          <div className={sectionStyles.contentWrapper}>
+            <OurMission />
+            <OurImpact />
+          </div>
+        </div>
         {/* Upcoming Events Section - Shows latest event only */}
         <LatestEvent />
         {/* Got Questions Section */}

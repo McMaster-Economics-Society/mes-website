@@ -1,0 +1,194 @@
+/* Styles for the Our Mission and Our Impact sections on the homepage
+   (moved from the About MES page, same look as before) */
+
+.wrapper {
+    background-color: #f8fafc;
+    padding: 4rem 0 1rem;
+}
+
+.contentWrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.section {
+    margin-bottom: 4rem;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.card {
+    background: white;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+}
+
+/* Our Mission */
+.missionIntro {
+    font-size: 1.125rem;
+    color: #374151;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.missionGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.missionItem {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    column-gap: 20px;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f1f5f9;
+    transition: all 0.3s ease;
+}
+
+.missionItem:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    border-color: #e2e8f0;
+}
+
+.missionIcon {
+    grid-row: span 2 / span 2;
+    align-items: center;
+    border-radius: 8px;
+    display: flex;
+    padding-bottom: 10px;
+    justify-content: center;
+}
+
+.missionTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #89303d;
+    margin-bottom: 0.25rem;
+    display: block;
+}
+
+.missionDescription {
+    color: #374151;
+    line-height: 1.5;
+    font-size: 0.95rem;
+    grid-column-start: 2;
+    margin-top: 0;
+}
+
+.callToAction {
+    background: #f3f4f6;
+    color: #1f2937;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border-left: 10px solid #89303d;
+    font-style: italic;
+}
+
+.link {
+    color: #3b82f6;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.link:hover {
+    color: #1d4ed8;
+}
+
+/* Our Impact */
+.impactDescription {
+    font-size: 1.125rem;
+    color: #374151;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.impactStats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.impactStat {
+    text-align: center;
+    flex: 1;
+}
+
+.impactNumber {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.impactLabel {
+    font-size: 1rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+/* 2x2 mission grid on larger screens */
+@media (min-width: 769px) {
+    .missionGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 965px) {
+    .wrapper {
+        padding: 2.5rem 0 0.5rem;
+    }
+
+    .contentWrapper {
+        padding: 0 1rem;
+    }
+
+    .sectionTitle {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .missionGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .impactStats {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .impactNumber {
+        font-size: 2.5rem;
+    }
+
+    .section {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 488px) {
+    .missionItem {
+        display: block;
+    }
+}

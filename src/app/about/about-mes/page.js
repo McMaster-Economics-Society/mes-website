@@ -3,29 +3,6 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./AboutMesPage.module.css";
-import { AnimatedCounter } from "../../components/AnimatedCounter";
-
-const MissionItem = ({ icon, title, link, description }) => (
-  <div className={styles.missionItem}>
-    <div className={styles.missionIcon}>
-      <Image
-        src={icon}
-        alt={title}
-        href={link}
-        width={200}
-        height={165.5}
-        style={{ objectFit: "cover" }}
-        priority
-      />
-    </div>
-    <div className={styles.missionTitle}>
-      <h3>{title}</h3>
-    </div>
-    <div className={styles.missionDescription}>
-      <p>{description}</p>
-    </div>
-  </div>
-);
 
 const ValueItem = ({ title, description, color }) => (
   <div className={styles.valueItem}>
@@ -33,21 +10,6 @@ const ValueItem = ({ title, description, color }) => (
       {title}
     </h3>
     <p className={styles.valueDescription}>{description}</p>
-  </div>
-);
-
-// Updated ImpactStat component with animation
-const ImpactStat = ({ number, label, suffix = "", duration = 2000 }) => (
-  <div className={styles.impactStat}>
-    <div className={styles.impactNumber}>
-      <AnimatedCounter
-        endValue={number}
-        duration={duration}
-        suffix={suffix}
-        className={styles.animatedNumber}
-      />
-    </div>
-    <div className={styles.impactLabel}>{label}</div>
   </div>
 );
 
@@ -87,33 +49,6 @@ const ForwardItem = ({ icon, title, description, link }) => {
 };
 
 export default function AboutMesPage() {
-  const missionItems = [
-    {
-      icon: "/academic-icon.jpg", // You'll need to add these icons
-      title: "Academic Growth",
-      description:
-        "Provide valuable insight on academic opportunities & career paths after graduation",
-    },
-    {
-      icon: "/promotion-icon.jpg",
-      title: "Department Promotion",
-      description:
-        "Enhance awareness of the Economics department and enrich student experience",
-    },
-    {
-      icon: "/network-icon.jpg",
-      title: "Network Building",
-      description:
-        "Help students connect with Economics Department scholars and industry professionals",
-    },
-    {
-      icon: "/discussion-icon.jpg",
-      title: "Meaningful Discussion",
-      description:
-        "Create spaces for exploration of economic issues among like-minded peers",
-    },
-  ];
-
   const values = [
     {
       title: "Cooperation and Communication",
@@ -205,35 +140,6 @@ export default function AboutMesPage() {
             </div>
           </section>
 
-          {/* Our Mission Section */}
-          <section className={styles.section}>
-            <h2 className={styles.sectionTitle}>Our Mission</h2>
-            <div className={styles.card}>
-              <p className={styles.missionIntro}>
-                We aim to bring students together through a variety of engaging
-                events throughout the academic year. Our mission centers around:
-              </p>
-              <div className={styles.missionGrid}>
-                {missionItems.map((item, index) => (
-                  <MissionItem key={index} {...item} />
-                ))}
-              </div>
-              <div className={styles.callToAction}>
-                <p>
-                  To fulfill these objectives, we host various events and
-                  initiatives throughout the term.
-                </p>
-                <p>
-                  Visit our{" "}
-                  <Link href="/events" className={styles.link}>
-                    Events
-                  </Link>{" "}
-                  page to learn more!
-                </p>
-              </div>
-            </div>
-          </section>
-
           {/* Our Values Section */}
           <section className={styles.section}>
             <h2 className={styles.sectionTitle}>Our Values</h2>
@@ -242,31 +148,6 @@ export default function AboutMesPage() {
                 {values.map((value, index) => (
                   <ValueItem key={index} {...value} />
                 ))}
-              </div>
-            </div>
-          </section>
-
-          {/* Our Impact Section with Animated Counters */}
-          <section className={styles.section}>
-            <h2 className={styles.sectionTitle}>Our Impact</h2>
-            <div className={styles.card}>
-              <p className={styles.impactDescription}>
-                Through careful planning and a focus on purposeful events, our
-                society has seen tremendous growth in recent years:
-              </p>
-              <div className={styles.impactStats}>
-                <ImpactStat
-                  number={100}
-                  suffix="+"
-                  label="Students at our larger events"
-                  duration={1500}
-                />
-                <ImpactStat
-                  number={50}
-                  suffix="+"
-                  label="Students at academic discussions"
-                  duration={1500}
-                />
               </div>
             </div>
           </section>
