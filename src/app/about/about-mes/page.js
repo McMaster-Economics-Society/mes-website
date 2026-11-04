@@ -152,6 +152,12 @@ export default function AboutMesPage() {
       description:
         "An opportunity for students to apply analytical skills to economics related topics",
     },
+    {
+      icon: "/podcast-icon.png",
+      title: "The Applied Pod",
+      description:
+        "A career-focused podcast featuring honest conversations with McMaster alumni, industry professionals, and faculty about the many paths an economics degree can open up",
+    },
   ];
 
   return (
@@ -265,9 +271,9 @@ export default function AboutMesPage() {
             </div>
           </section>
 
-          {/* Looking Forward Section */}
+          {/* Our Initiatives Section */}
           <section className={styles.section}>
-            <h2 className={styles.sectionTitle}>Looking Forward</h2>
+            <h2 className={styles.sectionTitle}>Our Initiatives</h2>
             <div className={styles.card}>
               <div className={styles.forwardGrid}>
                 {forwardItems.map((item, index) => (
