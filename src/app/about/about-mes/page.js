@@ -250,13 +250,13 @@ export default function AboutMesPage() {
               </p>
               <div className={styles.impactStats}>
                 <ImpactStat
-                  number={50}
+                  number={100}
                   suffix="+"
                   label="Students at our larger events"
                   duration={1500}
                 />
                 <ImpactStat
-                  number={20}
+                  number={50}
                   suffix="+"
                   label="Students at academic discussions"
                   duration={1500}
