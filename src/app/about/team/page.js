@@ -37,7 +37,7 @@ export default function TeamPage() {
   const executiveLeadership = [
     {
       name: "Laraib Saleem",
-      position: "President",
+      position: "Co-president",
       background: "Honours Economics Co-op",
       avatar: "/team-avatars/LaraibS.jpg",
     },
@@ -244,8 +244,8 @@ export default function TeamPage() {
           <TeamSection title="Events Team" members={eventsTeam} />
           <TeamSection title="Academic Team" members={academicTeam} />
           <TeamSection title="Finance Team" members={financeTeam} />
-          <TeamSection title="Magazine Team" members={magazineTeam} />
-          <TeamSection title="Other Team" members={otherTeam} />
+          <TeamSection title="The Rational Choice Team" members={magazineTeam} />
+          <TeamSection title="First Year Reps" members={otherTeam} />
         </div>
       </div>
     </>
