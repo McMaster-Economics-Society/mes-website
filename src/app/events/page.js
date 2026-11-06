@@ -6,6 +6,14 @@ import { getUpcomingEvents } from "@/app/data/events-database.js";
 import styles from "./EventsPage.module.css";
 import ExpandableDescription from "./ExpandableDescription";
 
+// Text shown on the big button for each buttonType
+const buttonLabels = {
+  register: "Register Now",
+  rsvp: "RSVP Now",
+  apply: "Apply Now",
+  bounce: "RSVP on Bounce",
+};
+
 const EventsPage = () => {
   const upcomingEvents = getUpcomingEvents();
   const EventCard = ({ event }) => (
@@ -27,36 +35,8 @@ const EventsPage = () => {
       <div className={styles.eventContent}>
         <div className={styles.eventHeader}>
           <h3 className={styles.eventTitle}>{event.title}</h3>
-          {/* Only show RSVP button if link exists */}
-          {event.link && (
-            event.closed ? (
-              <span className={styles.rsvpButtonDisabled}>CLOSED</span>
-            ) : (
-              <a
-                href={event.link}
-                className={
-                  event.buttonType === "bounce"
-                    ? styles.rsvpButton
-                    : styles.rsvpButtonDefault
-                }
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {event.buttonType === "bounce" && "BOUNCE RSVP"}
-                {event.buttonType === "rsvp" && "RSVP"}
-                {event.buttonType === "apply" && "APPLY"}
-                {event.buttonType === "bounce" && (
-                  <Image
-                    src="/bounce-white.svg"
-                    alt="Bounce logo"
-                    width={20}
-                    height={20}
-                  />
-                )}
-              </a>
-            )
-          )}
         </div>
+        <span className={styles.titleAccent} aria-hidden="true" />
 
         {event.description && (
           <ExpandableDescription description={event.description} />
@@ -149,6 +129,26 @@ const EventsPage = () => {
             </div>
           </div>
         </div>
+
+        {/* Big registration button so it doesn't get missed */}
+        {event.link &&
+          (event.closed ? (
+            <span className={styles.registerButtonClosed}>
+              Registration Closed
+            </span>
+          ) : (
+            <a
+              href={event.link}
+              className={styles.registerButton}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {buttonLabels[event.buttonType] || "Register Now"}
+              <span className={styles.registerArrow} aria-hidden="true">
+                →
+              </span>
+            </a>
+          ))}
       </div>
     </div>
   );

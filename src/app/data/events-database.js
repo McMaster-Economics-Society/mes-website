@@ -104,6 +104,22 @@ const allEvents = [
     buttonType: "rsvp",
     closed: false,
   },
+  {
+    id: 8,
+    title: "Econ Pathways: Diverse Career Pathways with an Economics Degree",
+    description:
+      "Economic Pathways is a career exploration event designed to help students understand the breadth of professional opportunities available to economics students. By connecting students with professionals from different industries and career stages, the event will provide practical insights into potential career paths, the skills required to succeed, and how students can prepare for their futures.\n\nOur Panelists include:\n• Lucas McDonald, Consultant, Operations (KPMG Canada)\n• Mahan Ghazali-Ardakani, Consultant, Enterprise Solutions (KPMG Canada)\n• Alex Recio Greenwell, Vice President (Deloitte Investment Banking)\n• Matthew Olsen, Director of Policy (Office of the Hon. Stephen Crawford, Ontario's Minister of Public and Business Service Delivery and Procurement)\n• Eden Andoni, Business Development Representative (Fidelity Investments Canada)\n\nQuestions? Contact us at econsoc@mcmaster.ca",
+    location:
+      "McMaster University (specific location details will be given to those who register)",
+    date: "November 27, 2026",
+    eventDate: "2026-11-27",
+    time: "6:30PM - 8:30PM",
+    image: "/event-images/econ-pathways.jpg",
+    imageAlt: "Save the date: Econ Pathways, November 27, 2026",
+    link: "https://forms.gle/o2BrjJJFzMSQCN5y5",
+    buttonType: "register",
+    closed: false,
+  },
 ];
 
 export function getUpcomingEvents() {
