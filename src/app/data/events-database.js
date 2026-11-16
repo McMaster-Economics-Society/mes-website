@@ -113,7 +113,7 @@ const allEvents = [
     date: "November 27, 2026",
     eventDate: "2026-11-27",
     time: "6:30PM - 8:30PM",
-    image: "/event-images/econ-pathways.jpg",
+    image: "/event-images/econ-pathways-poster.jpg",
     imageAlt: "Econ Pathways poster: November 27, 6:30 PM - 8:30 PM, PGCLL M21, sponsored by KPMG",
     link: "https://forms.gle/o2BrjJJFzMSQCN5y5",
     buttonType: "register",
