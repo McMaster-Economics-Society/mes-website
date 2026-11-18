@@ -205,13 +205,79 @@ export default function TeamPage() {
     },
   ];
 
+  // The Rational Choice team (Issue 2: Economic Horizons)
   const magazineTeam = [
     {
-      name: "Hridi Paul",
-      position: "Magazine Editor-In-Chief",
-      background:
-        "Honours Economics & Computer Science, Minor in Religious Studies, Health & Wellbeing",
-      avatar: "/team-avatars/HridiP.jpg",
+      name: "Giulia Bernardini",
+      position: "Co-Editor-in-Chief",
+      background: "",
+      avatar: "/team-avatars/rational-choice/GiuliaB.jpg",
+    },
+    {
+      name: "Maddie Taylor",
+      position: "Co-Editor-in-Chief",
+      background: "",
+      avatar: "/team-avatars/rational-choice/MaddieT.jpg",
+    },
+    {
+      name: "Chloe Wentzell",
+      position: "Creative Director",
+      background: "",
+      avatar: "/team-avatars/rational-choice/ChloeW-trc.jpg",
+    },
+    {
+      name: "Fatima Naqvi",
+      position: "Director of Editing",
+      background: "",
+      avatar: "/team-avatars/rational-choice/FatimaN.jpg",
+    },
+    {
+      name: "Laiba Imtiaz",
+      position: "Writer",
+      background: "",
+      avatar: "/team-avatars/rational-choice/LaibaI-trc.jpg",
+    },
+    {
+      name: "Ria Prinson",
+      position: "Writer",
+      background: "",
+      avatar: "/team-avatars/rational-choice/RiaP.jpg",
+    },
+    {
+      name: "Alisha Jafri",
+      position: "Outreach Coordinator",
+      background: "",
+      avatar: "/team-avatars/rational-choice/AlishaJ.jpg",
+    },
+    {
+      name: "Logan Rae",
+      position: "Editor",
+      background: "",
+      avatar: "/team-avatars/rational-choice/LoganR.jpg",
+    },
+    {
+      name: "Zahra Karani",
+      position: "Layout Designer",
+      background: "",
+      avatar: "/team-avatars/rational-choice/ZahraK.jpg",
+    },
+    {
+      name: "Gargi Moghe",
+      position: "Layout Designer",
+      background: "",
+      avatar: "/team-avatars/rational-choice/GargiM.jpg",
+    },
+    {
+      name: "Niki Davaran",
+      position: "First-Year Rep",
+      background: "",
+      avatar: "/team-avatars/rational-choice/NikiD.jpg",
+    },
+    {
+      name: "Sophia Peters",
+      position: "First-Year Rep",
+      background: "",
+      avatar: "/team-avatars/rational-choice/SophiaP.jpg",
     },
   ];
 
