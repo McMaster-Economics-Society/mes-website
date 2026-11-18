@@ -231,6 +231,19 @@
     transform: translateY(-3px);
 }
 
+/* Clickable initiative cards */
+.forwardItemLink {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.forwardItemLink:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(137, 48, 61, 0.4);
+}
+
 .forwardIcon {
     width: 120px;
     height: 120px;

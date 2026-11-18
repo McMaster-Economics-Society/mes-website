@@ -175,6 +175,12 @@ export default function SponsorshipPage() {
                 Contact Us
               </a>
             </div>
+            <p className={styles.download}>
+              Downloadable link:{" "}
+              <a href={PDF_DOWNLOAD} target="_blank" rel="noopener noreferrer">
+                {YEAR} Sponsorship Package (PDF)
+              </a>
+            </p>
           </div>
           <div className={styles.heroCircles}>
             <div className={`${styles.circle} ${styles.circleLarge}`}>
@@ -381,12 +387,6 @@ export default function SponsorshipPage() {
             </a>
           </div>
 
-          <p className={styles.download}>
-            Prefer a PDF?{" "}
-            <a href={PDF_DOWNLOAD} download>
-              Download the {YEAR} sponsorship package
-            </a>
-          </p>
         </div>
       </section>
     </div>

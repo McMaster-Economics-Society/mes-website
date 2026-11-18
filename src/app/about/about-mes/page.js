@@ -30,14 +30,15 @@ const ForwardItem = ({ icon, title, description, link }) => {
     </>
   );
 
-  // If a link is provided, wrap the content in a Link component
+  // If a link is provided, make the whole card clickable.
+  // Links to other sites (e.g. Spotify) open in a new tab; pages on our site open normally.
   if (link) {
+    const isExternal = link.startsWith("http");
     return (
       <Link
         href={link}
-        className={styles.forwardItem}
-        target="_blank"
-        rel="noopener noreferrer"
+        className={`${styles.forwardItem} ${styles.forwardItemLink}`}
+        {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       >
         {content}
       </Link>
@@ -79,7 +80,7 @@ export default function AboutMesPage() {
       title: "The Rational Choice",
       description:
         "McMaster's first student-led economics publication featuring articles, commentary, and creative content",
-      link: "https://docs.google.com/forms/d/e/1FAIpQLSf3hysUSUIak0yNoKVK8b8GIHuZ5yBq_VImUu6gXnPEKjrpEA/viewform",
+      link: "/magazine",
     },
     {
       icon: "/trophy-icon.png",
@@ -90,6 +91,7 @@ export default function AboutMesPage() {
     {
       icon: "/podcast-icon.png",
       title: "The Applied Pod",
+      link: "https://open.spotify.com/show/3fOMqyLQcCZzQEErAwm1jJ",
       description:
         "A career-focused podcast featuring honest conversations with McMaster alumni, industry professionals, and faculty about the many paths an economics degree can open up",
     },
